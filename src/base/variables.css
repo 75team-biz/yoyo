@@ -1,0 +1,35 @@
+/*
+ * 页面变量配置
+ */
+
+:root {
+    /*
+     *  颜色设置
+     */
+    --primary-color: #2196f3;
+    --paper-color: #f5f7fa;
+    --text-color: #777;
+    --green-color: #65c178;
+    --yellow-color: #ef9b6d;
+    --red-color: #ef9b6d;
+    --gray-color: #999;
+    --white-color: #fff;
+    --head-bg-color: #1d354d;
+    --form-border-color: var(--gray-color);
+    --link-color: var(--text-color);
+    --hover-link-color: var(--primary-color);
+    --disabled-link-color: #ddd;
+
+    /*
+     * 字体设置
+     */
+
+    --text-font: Helvetica, "Microsoft Yahei", Sans-Serif;
+    --heading-font: Helvetica,"Microsoft Yahei", STXihei, "Microsoft Jhenghei", "Microsoft Yahei", Simhei, Sans-Serif;
+
+
+    /*
+     * 布局设置
+     */
+    --min-window-width: 1200px;
+}

@@ -1,0 +1,28 @@
+{
+  "name": "yoyo",
+  "version": "0.0.1",
+  "description": "A lightweight CSS framework for faster and extensible development.",
+  "main": "yoyo.css",
+  "scripts": {
+    "watch": "node node_modules/webpack/bin/webpack.js -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhouweicsu/yoyo.git"
+  },
+  "author": "zhouweicsu",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^3.7.4",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.1.1",
+    "gulp-rename": "^1.2.2",
+    "perfectionist": "^2.2.0",
+    "postcss": "^5.1.2",
+    "postcss-browser-reporter": "^0.5.0",
+    "postcss-cssnext": "^2.7.0",
+    "postcss-import": "^8.1.2",
+    "postcss-reporter": "^1.4.1",
+    "postcss-url": "^5.1.2"
+  }
+}

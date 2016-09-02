@@ -1,0 +1,164 @@
+* {
+    box-sizing: inherit;
+}
+
+body {
+    min-width: 1200px;
+    font: normal normal 12px/1.6 Helvetica, Microsoft Yahei, Sans-Serif;
+    background: #f5f7fa;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+    font-family: Helvetica, Microsoft Yahei, STXihei, Microsoft Jhenghei, Simhei, Sans-Serif;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+em {
+    color: #ef9b6d;
+}
+
+button {
+    border: none;
+}
+
+#hd {
+    padding: 0 30px;
+    background: #1d354d;
+    color: #598cc0;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+}
+
+#hd .logo {
+    float: left;
+    margin-right: 50px;
+}
+
+#hd .logo a {
+    background: url(http://p2.qhmsg.com/d/inn/20f52ec0/logo.png) no-repeat 0;
+    background-size: auto 18px;
+    display: block;
+    width: 206px;
+    height: 50px;
+    text-indent: -100%;
+    overflow: hidden;
+}
+
+#hd a:hover {
+    color: #fff;
+}
+
+#hd .signed {
+    float: right;
+    text-align: right;
+    position: relative;
+}
+
+#hd .signed span {
+    display: inline-block;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+#hd .signed span:after {
+    content: "";
+    margin: 0 0 0 5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 4px 0;
+    border-color: #2196f3 transparent transparent;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+#hd .signed:hover {
+    background: #1c83eb;
+    color: #fff;
+}
+
+#hd .signed:hover span:before {
+    content: "";
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 8px 6px;
+    border-color: transparent transparent #2196f3;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+}
+
+#hd .signed:hover .user-menu {
+    display: block;
+}
+
+#hd .signed .user-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    overflow: hidden;
+    padding: 0 15px;
+    background: #fff;
+    border: 1px solid #dfe5eb;
+    border-top: none;
+    box-shadow: 0 0 3px #ebebeb;
+    width: 100%;
+    min-width: 110px;
+    text-align: center;
+}
+
+#hd .signed .user-menu li {
+    line-height: 1;
+    border-bottom: 1px solid #dfe5eb;
+    white-space: nowrap;
+}
+
+#hd .signed .user-menu li a {
+    display: inline-block;
+    width: 100%;
+    padding: 15px 0;
+    color: #7a8b99;
+}
+
+#hd .signed .user-menu li a:hover {
+    color: #7a8b99;
+}
+
+#hd .signed .user-menu li:last-child {
+    border-bottom: none;
+}
+
+.unsigned {
+    float: right;
+}
+
+.unsigned a {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    padding: 0 15px;
+    border: 1px solid #fff;
+    border-radius: 15px;
+}

@@ -1,0 +1,24 @@
+@import 'base/reset.css';
+@import 'base/variables.css';
+@import 'base/common.css';
+@import 'test.css';
+
+/* Testing autoprefixer */
+
+.autoprefixer {
+  display: flex;
+}
+
+/* Testing cssnext */
+
+.cssnext {
+  background: color(red alpha(-10%));
+}
+
+.clearfix {
+    @apply --clearfix;
+}
+
+.hv-center {
+    @apply --hv-center;
+}
