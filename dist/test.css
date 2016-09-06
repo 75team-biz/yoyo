@@ -163,3 +163,38 @@ button {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
 }
+
+.icon.is-twitter {
+    color: blue;
+    background: url(twt.png);
+}
+
+.icon.is-twitter:hover {
+    color: #fff;
+    background: blue;
+}
+
+.icon.is-youtube {
+    color: red;
+    background: url(youtube.png);
+}
+
+.icon.is-youtube:hover {
+    color: #fff;
+    background: red;
+}
+
+.rectangle {
+    height: 50px;
+    width: 100px;
+}
+
+.square {
+    height: 50px;
+    width: 50px;
+}
+
+.up-triangle {
+    border-width: 0 8px 6px;
+    border-color: transparent transparent #fff;
+}

@@ -1,32 +1,11 @@
 @import '../base/variables.css';
 @import '../base/common.css';
 
-:root {
-    /* 三角形 */
-    --triangle: {
-        width: 0;
-        height: 0;
-        border-style: solid;
-    };
-    /* * 上三角 */
-    --up-triangle: {
-        @apply --triangle;
-        border-width: 0 8px 6px 8px;
-        border-color: transparent transparent var(--primary-color) transparent;
-    };
-    /* * 下三角 */
-    --down-triangle: {
-        @apply --triangle;
-        border-width: 6px 4px 0 4px;
-        border-color: var(--primary-color) transparent transparent transparent;
-    };
-}
-
 /* 头部 */
 #hd {
     padding: 0 30px;
     background: var(--head-bg-color);
-    color: color(var(--head-bg-color) lightness(55%));
+    color: color(var(--head-bg-color) lightness(80%));
     height: 50px;
     line-height: 50px;
     position: relative;
@@ -47,7 +26,36 @@
         color: #fff;
     }
 }
+/* 头部导航 */
 
+#hd ul {
+    float: left;
+    font-size: 14px;
+    & li {
+        text-align: center;
+        float: left;
+        min-width: 80px;
+        & a {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            padding: 0 1.4em;
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+    & .active {
+        background: color(var(--head-bg-color) lightness(8%));
+        color: white;
+    }
+    & .active:after {
+        content: "";
+        bottom: 0;
+        up-triangle: #fff 8px 6px;
+        @apply --h-center;
+    }
+}
 /* 用户信息 */
 /* 登录用户 */
 
@@ -63,7 +71,7 @@
         &:after {
             content: "";
             margin: 0 0 0 5px;
-            @apply --down-triangle;
+            down-triangle: var(--primary-color) 6px 4px;
             vertical-align: middle;
             display: inline-block;
         }
@@ -76,7 +84,7 @@
         & span:before {
             content: "";
             bottom: 0;
-            @apply --up-triangle;
+            up-triangle: #fff 8px 6px;
             @apply --h-center;
         }
 
@@ -123,7 +131,7 @@
 
 /* 未登录用户 */
 
-.unsigned {
+#hd .unsigned {
     float: right;
     & a {
         display: inline-block;

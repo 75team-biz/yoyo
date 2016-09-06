@@ -1,0 +1,40 @@
+@import '../base/variables.css';
+@import '../base/common.css';
+
+.tab {
+    @apply --clearfix;
+    font-size: 14px;
+    line-height: 3.4;
+    background: var(--paper-color);
+    & .tab-item {
+        float: left;
+        position: relative;
+        border-right: 2px solid var(--paper-color);
+        & a {
+            display: block;
+            padding: 0 1.5em;
+            color: var(--link-color);
+            background: #e4eaf0;
+            box-sizing: border-box;
+            border-top: 2px solid #e4eaf0;
+            &:hover {
+                color: var(--link-color);
+            }
+            &.active {
+                color: var(--primary-color);
+                border-color: var(--primary-color);
+                background: #fff;
+            }
+        }
+    }
+    & .tab-title {
+        float: left;
+        font-size: 16px;
+        margin-right: 10px;
+    }
+    & .more {
+        float: right;
+        margin-left: 10px;
+    }
+}
+

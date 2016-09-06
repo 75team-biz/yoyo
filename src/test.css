@@ -22,3 +22,56 @@
 .hv-center {
     @apply --hv-center;
 }
+
+@define-mixin icon $network, $color: blue {
+    .icon.is-$(network) {
+        color: $color;
+        @mixin-content;
+    }
+    .icon.is-$(network):hover {
+        color: white;
+        background: $color;
+    }
+}
+
+@mixin icon twitter {
+    background: url(twt.png);
+}
+@mixin icon youtube, red {
+    background: url(youtube.png);
+}
+
+/* Input */
+size: $height $width {
+  height: $height;
+  width: $width;
+}
+
+size: $size {
+  height: $size;
+  width: $size;
+}
+
+.rectangle {
+  size: 50px 100px;
+}
+
+.square {
+  size: 50px;
+}
+
+/* * 上三角 */
+up-triangle: $color $width $height {
+    border-width: 0 $width $height $width;
+    border-color: transparent transparent $color transparent;
+}
+
+/* * 下三角 */
+down-triangle: $color $width $height {
+    border-width: $width $height 0 $height;
+    border-color: $color transparent transparent transparent;
+}
+
+.up-triangle {
+    up-triangle: #fff 8px 6px;
+}

@@ -2,4 +2,6 @@
 @import 'base/variables.css';
 @import 'base/common.css';
 @import 'modules/header.css';
+@import 'modules/tab.css';
+@import 'modules/table.css';
 @import 'test.css';

@@ -4,12 +4,57 @@
     <meta charset="UTF-8" />
     <meta name="author" content="https://github.com/zhouweicsu/yoyo" />
     <title>yoyo.css - a lightweight CSS framework</title>
-    <link rel="stylesheet" href="dist/yoyo.css" />
+    <link rel="stylesheet" href="./dist/yoyo.css" />
+    <style>
+        .section {
+            margin: 20px auto;
+            text-align: center;
+        }
+        .container {
+            padding: 0 200px;
+        }
+    </style>
 </head>
 <body>
+    <header id="hd">
+        <h1 class="logo">
+            <a href="/">yoyo.css</a>
+        </h1>
+        <ul class="nav">
+            <li><a href="/" class="active">首页</a></li>
+            <li><a href="/document.html">文档</a></li>
+            <li><a href="/help.html">帮助中心</a></li>
+        </ul>
+   </header>
+    <section id="tab" class="section bg-grey container">
+        <ul class="tab">
+            <li class="tab-item">
+                <a href="#" class="active">tab 1</a>
+            </li>
+            <li class="tab-item">
+                <a href="#table">table</a>
+            </li>
+            <li class="tab-item">
+                <a href="#">tab 3</a>
+            </li>
+        </ul>
+    </section>
+    <section id="table" class="section bg-grey container">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>名称</th>
+                    <th>姓名</th>
+                    <th>思考</th>
+                    <th>名称</th>
+                    <th>名称</th>
+                </tr>
+            </thead>
+        </table>
+    </section>
     <section class="section bg-grey">
         <section id="overview" class="grid-hero container grid-960">
-            <header class="text-center"><h3>Spectre.css</h3></header>
+            <header class="text-center"><h3>yoyo.css</h3></header>
             <section>
                 <p><strong>yoyo.css</strong> is a lightweight CSS framework.</p>
             </section>

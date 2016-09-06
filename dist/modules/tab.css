@@ -1,0 +1,90 @@
+* {
+    box-sizing: inherit;
+}
+
+body {
+    min-width: 1200px;
+    font: normal normal 12px/1.6 Helvetica, Microsoft Yahei, Sans-Serif;
+    background: #f5f7fa;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+    font-family: Helvetica, Microsoft Yahei, STXihei, Microsoft Jhenghei, Simhei, Sans-Serif;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+em {
+    color: #ef9b6d;
+}
+
+button {
+    border: none;
+}
+
+.tab {
+    font-size: 14px;
+    line-height: 3.4;
+    background: #f5f7fa;
+}
+
+.tab:after, .tab:before {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+
+.tab:after {
+    clear: both;
+}
+
+.tab .tab-item {
+    float: left;
+    position: relative;
+    border-right: 2px solid #f5f7fa;
+}
+
+.tab .tab-item a {
+    display: block;
+    padding: 0 1.5em;
+    color: #777;
+    background: #e4eaf0;
+    box-sizing: border-box;
+    border-top: 2px solid #e4eaf0;
+}
+
+.tab .tab-item a:hover {
+    color: #777;
+}
+
+.tab .tab-item a.active {
+    color: #2196f3;
+    border-color: #2196f3;
+    background: #fff;
+}
+
+.tab .tab-title {
+    float: left;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.tab .more {
+    float: right;
+    margin-left: 10px;
+}
