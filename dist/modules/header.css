@@ -57,7 +57,7 @@ button {
     display: block;
     width: 206px;
     height: 50px;
-    text-indent: -100%;
+    text-indent: -1000%;
     overflow: hidden;
 }
 
