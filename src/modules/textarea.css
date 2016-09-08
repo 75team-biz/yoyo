@@ -1,0 +1,15 @@
+@import '../base/variables.css';
+
+/* textarea */
+textarea {
+    border: 1px solid #e9e9e9;
+    padding: 0.3em 0.4em;
+    margin-right: 5px;
+}
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+textarea.error {
+    border-color: var(--red-color);
+}

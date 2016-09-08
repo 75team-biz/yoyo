@@ -2,7 +2,7 @@
 @import '../base/common.css';
 
 /* 头部 */
-#hd {
+.header {
     padding: 0 30px;
     background: var(--head-bg-color);
     color: color(var(--head-bg-color) lightness(80%));
@@ -28,13 +28,13 @@
 }
 /* 头部导航 */
 
-#hd ul {
+.header ul {
     float: left;
     font-size: 14px;
     & li {
         text-align: center;
         float: left;
-        min-width: 80px;
+        min-width: 100px;
         & a {
             position: relative;
             display: block;
@@ -59,7 +59,7 @@
 /* 用户信息 */
 /* 登录用户 */
 
-#hd .signed {
+.header .signed {
     float: right;
     text-align: right;
     position: relative;
@@ -71,14 +71,14 @@
         &:after {
             content: "";
             margin: 0 0 0 5px;
-            down-triangle: var(--primary-color) 6px 4px;
+            down-triangle: color(var(--head-bg-color) lightness(80%)) 6px 4px;
             vertical-align: middle;
             display: inline-block;
         }
     }
 
     &:hover {
-        background: color(var(--head-bg-color) blackness(8%));
+        background: color(var(--head-bg-color) lightness(8%));
         color: white;
 
         & span:before {
@@ -104,7 +104,6 @@
         border: 1px solid #dfe5eb;
         border-top: none;
         box-shadow: 0px 0px 3px #ebebeb;
-        width: 100%;
         min-width: 110px;
         text-align: center;
 
@@ -115,11 +114,10 @@
 
             & a {
                 display: inline-block;
-                width: 100%;
                 padding: 15px 0;
                 color: #7a8b99;
                 &:hover {
-                    color: #7a8b99;
+                    color: color(var(--head-bg-color) lightness(80%)) ;
                 }
             }
             &:last-child {
@@ -131,7 +129,7 @@
 
 /* 未登录用户 */
 
-#hd .unsigned {
+.header .unsigned {
     float: right;
     & a {
         display: inline-block;
@@ -141,6 +139,7 @@
         padding: 0 15px;
         border: 1px solid #fff;
         border-radius: 15px;
+        overflow: initial;
     }
 }
 

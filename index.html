@@ -6,65 +6,383 @@
     <title>yoyo.css - a lightweight CSS framework</title>
     <link rel="stylesheet" href="./dist/yoyo.css" />
     <style>
+        .content {
+            padding: 0 23px;
+            background: #f5f7fa;
+            vertical-align: top;
+            margin-left: 200px;
+            border-left: 1px solid #ededed;
+            box-sizing: content-box;
+            overflow: hidden;
+        }
+        h2 {
+            margin: 2em 0;
+            color: #333;
+        }
         .section {
-            margin: 20px auto;
+            margin: 2em auto;
             text-align: center;
         }
         .container {
-            padding: 0 200px;
+            padding: 0 10em 2em;
+            border-bottom: 1px solid #eee;
+        }
+        .btn-group, .input-group, .radio-group, .checkbox-group, .select-group{
+            margin: 2em 0;
+        }
+        #overview {
+            padding: 6em 0 12em;
+        }
+        #overview h3 {
+            padding: 2em 0;
+            font-size: 3em;
         }
     </style>
 </head>
 <body>
-    <header id="hd">
+    <header class="header">
         <h1 class="logo">
             <a href="/">yoyo.css</a>
         </h1>
+        <div id="login_info">
+           <div class="signed">
+              <span class="uname">您好，yoyo.css</span>
+              <ul class="user-menu">
+                 <li>
+                    <a href="#">个人设置</a>
+                 </li>
+                 <li>
+                    <a href="#" class="logout">退出账户</a>
+                 </li>
+              </ul>
+           </div>
+           <ul class="unsigned" style="display: none;">
+              <li><a href="#">登录</a></li>
+           </ul>
+        </div>
         <ul class="nav">
             <li><a href="/" class="active">首页</a></li>
-            <li><a href="/document.html">文档</a></li>
-            <li><a href="/help.html">帮助中心</a></li>
+            <li><a href="#">导航一</a></li>
+            <li><a href="#">导航二</a></li>
         </ul>
-   </header>
-    <section id="tab" class="section bg-grey container">
-        <ul class="tab">
-            <li class="tab-item">
-                <a href="#" class="active">tab 1</a>
-            </li>
-            <li class="tab-item">
-                <a href="#table">table</a>
-            </li>
-            <li class="tab-item">
-                <a href="#">tab 3</a>
-            </li>
-        </ul>
+    </header>
+    <section class="sidebar">
+       <div>
+          <h3 class="hd">简介</h3>
+          <ul class="navigator">
+             <li><a href="#overview" class="active">简介</a></li>
+          </ul>
+       </div>
+       <div>
+          <h3 class="hd">组件</h3>
+          <ul class="navigator">
+             <li><a href="#tab">Tab</a></li>
+             <li><a href="#table">Table</a></li>
+             <li><a href="#pagination">Pagination</a></li>
+          </ul>
+       </div>
+       <div>
+          <h3 class="hd">表单元素</h3>
+          <ul class="navigator">
+             <li><a href="#button">Button</a></li>
+             <li><a href="#input">Input</a></li>
+             <li><a href="#select">Select</a></li>
+             <li><a href="#radio">Radio</a></li>
+             <li><a href="#checkbox">Checkbox</a></li>
+             <li><a href="#textarea">Textarea</a></li>
+          </ul>
+       </div>
+       <div>
+          <h3 class="hd">布局</h3>
+          <ul class="navigator">
+             <li><a href="#header">Header</a></li>
+             <li><a href="#sidebar">Sidebar</a></li>
+             <li><a href="#sidebar">Footer</a></li>
+          </ul>
+       </div>
     </section>
-    <section id="table" class="section bg-grey container">
-        <table class="data-table">
-            <thead>
-                <tr>
-                    <th>名称</th>
-                    <th>姓名</th>
-                    <th>思考</th>
-                    <th>名称</th>
-                    <th>名称</th>
-                </tr>
-            </thead>
-        </table>
-    </section>
-    <section class="section bg-grey">
-        <section id="overview" class="grid-hero container grid-960">
-            <header class="text-center"><h3>yoyo.css</h3></header>
-            <section>
+    <div class="content">
+        <section class="section bg-grey">
+            <section id="overview" class="grid-hero container grid-960">
+                <h3>yoyo.css</h3>
                 <p><strong>yoyo.css</strong> is a lightweight CSS framework.</p>
-            </section>
-            <section class="notes text-center">
-                <div class="btn-group">
-                    <a href="https://github.com/zhouweicsu/yoyo" target="_blank" class="btn btn-primary">GitHub Repo</a>
-                    <a href="#getting-started" class="btn btn-primary">Documentation</a>
-                </div>
+                <section class="notes text-center">
+                    <div class="btn-group">
+                        <a href="https://github.com/zhouweicsu/yoyo" target="_blank" class="btn btn-primary">GitHub Repo</a>
+                        <a href="https://github.com/zhouweicsu/yoyo" target="_blank" class="btn btn-primary">Download</a>
+                    </div>
+                </section>
             </section>
         </section>
-    </section>
+       <section id="tab" class="section bg-grey container">
+            <h2>Tab</h2>
+            <ul class="tab">
+                <li class="tab-item">
+                    <a href="#" class="active">tab 1</a>
+                </li>
+                <li class="tab-item">
+                    <a href="#">tab2</a>
+                </li>
+                <li class="tab-item">
+                    <a href="#">tab 3</a>
+                </li>
+            </ul>
+        </section>
+        <section id="table" class="section bg-grey container">
+            <h2>Table</h2>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>名称</th>
+                        <th>姓名</th>
+                        <th>思考</th>
+                        <th>名称</th>
+                        <th>名称</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>yoyo.css</td>
+                        <td>yoyo.css</td>
+                        <td>yoyo.css</td>
+                        <td>yoyo.css</td>
+                        <td>yoyo.css</td>
+                    </tr>
+                    <tr>
+                        <td>yoyo.css</td>
+                        <td>yoyo.css</td>
+                        <td>yoyo.css</td>
+                        <td>yoyo.css</td>
+                        <td>yoyo.css</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="pagination" class="section bg-grey container">
+            <h2>Pagination</h2>
+            <div class="pagination">
+                <span class="total">共<em>36815</em>条</span>
+                <span class="pages">
+                    <a href="#" class="page disabled" >上一页</a>
+                    <a href="#" class="page">1</a>
+                    <a href="#" class="page">2</a>
+                    <a href="#" class="page">3</a>
+                    <a href="#" class="page current">4</a>
+                    <a href="#" class="page">5</a>
+                    <a href="#" class="page">6</a>
+                    <a href="#" class="page">7</a>
+                    <a href="#" class="page">8</a>
+                    <em class="page ellipsis">⋯</em>
+                    <a href="#" class="page">1841</a>
+                    <a href="#" class="page">下一页</a>
+                </span>
+            </div>
+        </section>
+        <section id="button" class="section bg-grey container">
+            <h2>Button</h2>
+            <div class="btn-group">
+                <button class="btn">button</button>
+                <button class="btn btn-primary">primary button</button>
+                <button class="btn btn-info">info button</button>
+                <button class="btn btn-white">white button</button>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-mini">mini button</button>
+                <button class="btn btn-small">small button</button>
+                <button class="btn btn-medium">medium button</button>
+                <button class="btn btn-big">big button</button>
+            </div>
+            <div class="btn-group">
+                <button class="btn disabled">disabled button</button>
+                <button class="btn btn-round">round button</button>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-primary btn-round">primary round button</button>
+                <button class="btn btn-primary btn-big btn-round">big primary round button</button>
+                <button class="btn btn-white btn-mini btn-round">mini white round button</button>
+            </div>
+        </section>
+        <section id="input" class="section bg-grey container">
+            <h2>Input</h2>
+            <div class="input-group">
+                <input type="text" class="size-small" placeholder="小输入框"/>
+                <input type="text" placeholder="普通文本输入框"/>
+                <input type="text" class="size-big" placeholder="大输入框"/>
+            </div>
+            <div class="input-group">
+                <input type="text" placeholder="普通文本输入框"/>
+                <input type="password" placeholder="密码输入框"/>
+                <input type="url" placeholder="url输入框"/>
+                <input type="number" placeholder="数字输入框"/>
+            </div>
+            <div class="input-group">
+                <input type="text" disabled placeholder="disabled输入框" value="disabled"/>
+                <input type="text" readonly placeholder="只读输入框" value="这是个只读输入框"/>
+                <input type="text" class="error" placeholder="输入框报错" value="输入错误"/>
+        </section>
+        <section id="select" class="section bg-grey container">
+            <h2>Select</h2>
+            <div class="select-group">
+                <select>
+                    <option value="0">湘菜</option>
+                    <option value="1">口味蛇</option>
+                    <option value="2">双椒鱼头</option>
+                    <option value="3">回锅肉</option>
+                    <option value="4">毛氏红烧肉</option>
+                </select>
+                <select class="size-small">
+                    <option value="0">湘菜</option>
+                    <option value="1">麻辣小龙虾</option>
+                    <option value="2">双椒鱼头</option>
+                    <option value="3">回锅肉</option>
+                    <option value="4">毛氏红烧肉</option>
+                </select>
+                <select class="size-big">
+                    <option value="0">湘菜</option>
+                    <option value="1">口味虾</option>
+                    <option value="2">双椒鱼头</option>
+                    <option value="3">回锅肉</option>
+                    <option value="4">毛氏红烧肉</option>
+                </select>
+            </div>
+            <div class="select-group">
+                <select disabled>
+                    <option value="0">湘菜</option>
+                    <option value="1">臭豆腐</option>
+                    <option value="2" checked>双椒鱼头</option>
+                    <option value="3">回锅肉</option>
+                    <option value="4">毛氏红烧肉</option>
+                </select>
+                <select class="error">
+                    <option value="0">其他菜系</option>
+                    <option value="1">不放辣椒</option>
+                    <option value="2" checked>不放油</option>
+                    <option value="3">口味清淡</option>
+                </select>
+            </div>
+        </section>
+        <section id="radio" class="section bg-grey container">
+            <h2>Radio</h2>
+            <div class="radio-group">
+                <label>
+                       <input type="radio" name="group1" value="v1"><i></i>radio1
+                </label>
+                <label>
+                       <input type="radio" name="group1" value="v2"><i></i>radio2
+                </label>
+                <label>
+                       <input type="radio" name="group1" value="v3"><i></i>radio3
+                   </label>
+                <label>
+                       <input type="radio" name="group1" value="v4" checked><i></i>radio4
+                </label>
+            </div>
+            <div class="radio-group">
+                <label>
+                       <input type="radio" name="group2" value="v1"><i></i>radio1
+                </label>
+                <label>
+                       <input type="radio" name="group2" value="v2" disabled checked><i></i>选中且禁用
+                </label>
+                <label>
+                       <input type="radio" name="group2" disabled value="v3"><i></i>禁用
+                   </label>
+                <label>
+                       <input type="radio" name="group2" value="v4"><i></i>radio4
+                </label>
+            </div>
+        </section>
+        <section id="checkbox" class="section bg-grey container">
+            <h2>Checkbox</h2>
+            <div class="checkbox-group">
+                <label>
+                       <input type="checkbox" value="v1" checked><i></i>checkbox1
+                </label>
+                <label>
+                       <input type="checkbox" value="v2"><i></i>checkbox2
+                </label>
+                <label>
+                       <input type="checkbox" value="v3"><i></i>checkbox3
+                   </label>
+                <label>
+                       <input type="checkbox" value="v4"><i></i>checkbox4
+                </label>
+            </div>
+            <div class="checkbox-group">
+                <label>
+                       <input type="checkbox" value="v1"><i></i>checkbox1
+                </label>
+                <label>
+                       <input type="checkbox" value="v2" disabled checked><i></i>选中且禁用
+                </label>
+                <label>
+                       <input type="checkbox" value="v3" disabled><i></i>禁用
+                   </label>
+                <label>
+                       <input type="checkbox" value="v4"><i></i>checkbox4
+                </label>
+            </div>
+        </section>
+        <section id="textarea" class="section bg-grey container">
+            <h2>Textarea</h2>
+            <textarea cols="80" rows="10">1、将鱼头洗净切成两半，鱼头背相连，泡红椒剁碎，葱切碎，姜块切末，蒜半个剁细末。
+2、然后将鱼头放在碗里，然后抹上油。
+3、在鱼头上撒上剁椒、姜末、盐、豆豉、料酒。
+4、锅中加水烧沸后，将鱼头连碗一同放入锅中蒸熟（约需10分钟）。
+5、将蒜茸和葱碎铺在鱼头上，再蒸一分钟。
+6、从锅中取出碗后，再将炒锅置火上放油烧至十成热，铲起淋在鱼头上即成。</textarea>
+        </section>
+        <footer class="footer">
+            Copyright © yoyo.css 2005-2016  All Rights Reserved yoyo.css 京ICP证666666号
+        </footer>
+    </div>
+    <script>
+        // 页面滚动时间，将 sidebar 固定在页面左侧
+        function sidebarScroll() {
+            var sidebar = document.querySelector('.sidebar');
+            var cls = sidebar.className;
+            if(window.scrollY > 50){
+                if( cls.indexOf('fix-sidebar') == -1){
+                    sidebar.className = cls + ' fix-sidebar';
+                }
+            }else {
+                sidebar.className = cls.replace(/\bfix-sidebar\b/g, '');
+            }
+        }
+
+        // 退出操作
+        function logout() {
+            var signedEle = document.querySelector('.signed');
+            var unsignedEle = document.querySelector('.unsigned');
+            signedEle.style.display = "none";
+            unsignedEle.style.display = "block";
+        }
+
+        // 导航操作
+        function sidebarClick(e) {
+            if(e.target.tagName === 'A') {
+                var activeEle = document.querySelector('.sidebar .active');
+                activeEle.className = activeEle.className.replace(/\bactive\b/g, '');
+                e.target.className = e.target.className + ' active';
+            }
+        }
+
+        window.onload = function() {
+            // 退出操作
+            var logoutEle = document.querySelector('.logout');
+            var sidebarEle = document.querySelector('.sidebar');
+            if (document.addEventListener) {
+                document.addEventListener('scroll', sidebarScroll, false);
+                sidebarEle.addEventListener('click', sidebarClick, false);
+                logoutEle.addEventListener('click', logout, false);
+            } else if (document.attachEvent)  {
+                document.attachEvent('scroll', sidebarScroll);
+                sidebarEle.attachEvent('click', sidebarClick);
+                logoutEle.attachEvent('click', logout);
+            }
+            //初始执行一次计算sidebar的位置
+            sidebarScroll();
+        }
+    </script>
 </body>
 </html>

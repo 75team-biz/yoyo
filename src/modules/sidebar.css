@@ -1,0 +1,55 @@
+@import '../base/variables.css';
+
+/** 样式覆盖 **/
+.sidebar{
+    position: absolute;
+    width: 200px;
+    vertical-align: top;
+    text-align: left;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: slategray;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #b8c0c8;
+    }
+
+    &.fix-sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        overflow: auto;
+    }
+    & .hd {
+        font-size: 14px;
+        line-height: 35px;
+        color: #888;
+        padding-left: 25px;
+        .fa {
+            padding-right: 10px;
+        }
+    }
+    & .navigator {
+        border-bottom: 1px solid #eff3f6;
+        & li {
+            color: #4c4c4c;
+            height:  40px;
+            line-height: 40px;
+            & a {
+                display: block;
+                padding-left: 52px;
+                &.active {
+                    background-color: #eff3f6;
+                    color: var(--primary-color);
+                    border-right: 2px solid var(--primary-color);
+                }
+            }
+        }
+    }
+}

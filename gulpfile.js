@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+const rename = require("gulp-rename");
 const postcss = require('gulp-postcss');
 const cssnext = require('postcss-cssnext');
 const mixins = require('postcss-mixins');
@@ -18,6 +19,16 @@ gulp.task('css', function () {
   ];
   return gulp.src('./src/**/*.css')
     .pipe(postcss(processors))
+    .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('uglify', function () {
+  const processors = [
+    cssnano
+  ];
+  return gulp.src('./dist/yoyo.css')
+    .pipe(postcss(processors))
+    .pipe(rename('yoyo.min.css'))
     .pipe(gulp.dest('./dist'));
 });
 

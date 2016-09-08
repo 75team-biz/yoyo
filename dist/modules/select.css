@@ -1,0 +1,76 @@
+* {
+    box-sizing: inherit;
+}
+
+body {
+    min-width: 1200px;
+    font: normal normal 12px/1.6 Helvetica, Microsoft Yahei, Sans-Serif;
+    background: #f5f7fa;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+    font-family: Helvetica, Microsoft Yahei, STXihei, Microsoft Jhenghei, Simhei, Sans-Serif;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+em {
+    color: #ef9b6d;
+}
+
+button {
+    border: none;
+}
+
+select:disabled {
+    background-color: #f1f1f1;
+    color: #ccc;
+    cursor: default;
+    cursor: not-allowed;
+}
+
+select, select:disabled {
+    border: 1px solid #e9e9e9;
+}
+
+select {
+    line-height: 1;
+    padding: 0 .2em;
+    height: 2.5em;
+    width: 200px;
+    box-shadow: inset 0 1px 3px #eee;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+select:focus {
+    outline: none;
+    border-color: lighten($primary-color, 10);
+}
+
+select .error {
+    border-color: #ef9b6d;
+}
+
+select.size-small {
+    width: 100px;
+}
+
+select.size-big {
+    width: 300px;
+}

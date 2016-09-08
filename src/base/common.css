@@ -62,8 +62,10 @@ button {
     };
     /* * 垂直水平居中 */
     --hv-center: {
-        @apply --v-center;
-        @apply --h-center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     };
     /* 三角形 */
     --triangle: {

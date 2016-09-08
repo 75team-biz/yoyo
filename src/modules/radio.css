@@ -1,0 +1,81 @@
+@import '../base/variables.css';
+@import '../base/common.css';
+
+/*单选按钮*/
+
+input[type="radio"],
+input[type="checkbox"]{
+    position: absolute;
+    clip: rect(0,0,0,0);
+    cursor: pointer;
+}
+
+input[type="radio"] + i,
+input[type="checkbox"]+ i {
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--form-border-color);
+    vertical-align: middle;
+    margin: 0 8px 0 5px;
+    top: -1px;
+}
+
+input[type="radio"] + i {
+    border-radius: 50%;
+    &:hover {
+        box-shadow: inset 0 0 3px 0 #aaa;
+    }
+}
+
+input[type="radio"]:checked + i,
+input[type="checkbox"]:checked+ i{
+    border-color: var(--primary-color);
+    &:hover {
+        box-shadow: inset 0 0 3px 0 var(--primary-color);
+    }
+}
+
+label:hover {
+    input[type="radio"] + i {
+        box-shadow: inset 0 0 3px 0 #aaa;
+    }
+
+    input[type="radio"]:checked + i,
+    input[type="checkbox"]:checked+ i{
+        box-shadow: inset 0 0 3px 0 var(--primary-color);
+    }
+}
+
+input[type="radio"] + i:after,
+input[type="checkbox"] + i:after {
+    opacity: 0;
+    transition: opacity .1s;
+}
+
+input[type="radio"] + i:after {
+    @apply --hv-center;
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--primary-color);
+}
+
+input[type="checkbox"] + i:after {
+    @apply --hv-center;
+    /*content: '\f00c';*/
+    content: '✔';
+    color: var(--primary-color);
+    font-size: 10px;
+}
+
+input[type="radio"]:checked + i:after,
+input[type="checkbox"]:checked + i:after {
+    opacity: 1;
+}
+
+input[type="radio"]:disabled + i {
+    color: var(--form-border-color);
+}

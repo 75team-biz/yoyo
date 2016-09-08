@@ -1,0 +1,117 @@
+* {
+    box-sizing: inherit;
+}
+
+body {
+    min-width: 1200px;
+    font: normal normal 12px/1.6 Helvetica, Microsoft Yahei, Sans-Serif;
+    background: #f5f7fa;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+    font-family: Helvetica, Microsoft Yahei, STXihei, Microsoft Jhenghei, Simhei, Sans-Serif;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+em {
+    color: #ef9b6d;
+}
+
+button {
+    border: none;
+}
+
+input[type=checkbox], input[type=radio] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+input[type=checkbox]+i, input[type=radio]+i {
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #999;
+    vertical-align: middle;
+    margin: 0 8px 0 5px;
+    top: -1px;
+}
+
+input[type=radio]+i {
+    border-radius: 50%;
+}
+
+input[type=radio]+i:hover {
+    box-shadow: inset 0 0 3px 0 #aaa;
+}
+
+input[type=checkbox]:checked+i, input[type=radio]:checked+i {
+    border-color: #2196f3;
+}
+
+input[type=checkbox]:checked+i:hover, input[type=radio]:checked+i:hover {
+    box-shadow: inset 0 0 3px 0 #2196f3;
+}
+
+label:hover {
+    input[type=radio]+i {
+        box-shadow: inset 0 0 3px 0 #aaa;
+    }
+
+    input[type=checkbox]:checked+i, input[type=radio]:checked+i {
+        box-shadow: inset 0 0 3px 0 #2196f3;
+    }
+}
+
+input[type=checkbox]+i:after, input[type=radio]+i:after {
+    opacity: 0;
+    -webkit-transition: opacity .1s;
+            transition: opacity .1s;
+}
+
+input[type=radio]+i:after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #2196f3;
+}
+
+input[type=checkbox]+i:after, input[type=radio]+i:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+
+input[type=checkbox]+i:after {
+    content: '✔';
+    color: #2196f3;
+    font-size: 10px;
+}
+
+input[type=checkbox]:checked+i:after, input[type=radio]:checked+i:after {
+    opacity: 1;
+}
+
+input[type=radio]:disabled+i {
+    color: #999;
+}

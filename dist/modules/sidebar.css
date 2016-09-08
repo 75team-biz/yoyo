@@ -1,0 +1,58 @@
+.sidebar {
+    position: absolute;
+    width: 200px;
+    vertical-align: top;
+    text-align: left;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #708090;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #b8c0c8;
+}
+
+.sidebar.fix-sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow: auto;
+}
+
+.sidebar .hd {
+    font-size: 14px;
+    line-height: 35px;
+    color: #888;
+    padding-left: 25px;
+
+    .fa {
+        padding-right: 10px;
+    }
+}
+
+.sidebar .navigator {
+    border-bottom: 1px solid #eff3f6;
+}
+
+.sidebar .navigator li {
+    color: #4c4c4c;
+    height: 40px;
+    line-height: 40px;
+}
+
+.sidebar .navigator li a {
+    display: block;
+    padding-left: 52px;
+}
+
+.sidebar .navigator li a.active {
+    background-color: #eff3f6;
+    color: #2196f3;
+    border-right: 2px solid #2196f3;
+}
