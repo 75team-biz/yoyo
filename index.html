@@ -5,6 +5,7 @@
     <meta name="author" content="https://github.com/zhouweicsu/yoyo" />
     <title>yoyo.css - a lightweight CSS framework</title>
     <link rel="stylesheet" href="./dist/yoyo.css" />
+    <link rel="stylesheet" href="./resource/prism.css" />
     <style>
         .content {
             padding: 0 23px;
@@ -36,6 +37,22 @@
         #overview h3 {
             padding: 2em 0;
             font-size: 3em;
+        }
+        .code-wrap {
+            text-align: left;
+            margin: 1em 0;
+        }
+        .code-wrap pre {
+            display: none;
+            font-size: 1.2em;
+            padding: 0 1em;
+            border-left: 3px solid #2196f3;
+        }
+        .code-wrap .hidecode {
+            display: none;
+        }
+        textarea.code {
+            display: none;
         }
     </style>
 </head>
@@ -127,6 +144,27 @@
                     <a href="#">tab 3</a>
                 </li>
             </ul>
+            <div class="code-wrap">
+                <button class="btn btn-primary showcode" onclick="showcode(this)">show code</button>
+                <button class="btn btn-primary hidecode" onclick="hidecode(this)">hide code</button>
+<textarea class="code">
+
+<ul class="tab">
+    <li class="tab-item">
+        <a href="#" class="active">tab 1</a>
+    </li>
+    <li class="tab-item">
+        <a href="#">tab2</a>
+    </li>
+    <li class="tab-item">
+        <a href="#">tab 3</a>
+    </li>
+</ul></textarea>
+                <pre>
+                    <code class="language-markup">
+                    </code>
+                </pre>
+            </div>
         </section>
         <section id="table" class="section bg-grey container">
             <h2>Table</h2>
@@ -157,6 +195,43 @@
                     </tr>
                 </tbody>
             </table>
+            <div class="code-wrap">
+                <button class="btn btn-primary showcode" onclick="showcode(this)">show code</button>
+                <button class="btn btn-primary hidecode" onclick="hidecode(this)">hide code</button>
+<textarea class="code">
+
+<table class="data-table">
+    <thead>
+        <tr>
+            <th>名称</th>
+            <th>姓名</th>
+            <th>思考</th>
+            <th>名称</th>
+            <th>名称</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>yoyo.css</td>
+            <td>yoyo.css</td>
+            <td>yoyo.css</td>
+            <td>yoyo.css</td>
+            <td>yoyo.css</td>
+        </tr>
+        <tr>
+            <td>yoyo.css</td>
+            <td>yoyo.css</td>
+            <td>yoyo.css</td>
+            <td>yoyo.css</td>
+            <td>yoyo.css</td>
+        </tr>
+    </tbody>
+</table></textarea>
+                <pre>
+                    <code class="language-markup">
+                    </code>
+                </pre>
+            </div>
         </section>
         <section id="pagination" class="section bg-grey container">
             <h2>Pagination</h2>
@@ -404,6 +479,22 @@
             }
         }
 
+        //显示代码
+        function showcode(e) {
+            var code = e.nextElementSibling.nextElementSibling.value;
+            var codeEle = e.parentElement.querySelector('pre code');
+            codeEle.innerHTML = Prism.highlight(code, Prism.languages.markup);
+            codeEle.parentElement.style.display = "block";
+            e.style.display = "none";
+            e.nextElementSibling.style.display = "block";
+        }
+        //隐藏代码
+        function hidecode(e) {
+            e.style.display = "none";
+            e.previousElementSibling.style.display = "block";
+            e.nextElementSibling.nextElementSibling.style.display = "none";
+        }
+
         window.onload = function() {
             // 退出操作
             var logoutEle = document.querySelector('.logout');
@@ -421,5 +512,6 @@
             sidebarScroll();
         }
     </script>
+    <script src="./resource/prism.js"></script>
 </body>
 </html>
