@@ -16,13 +16,15 @@
             box-sizing: content-box;
             overflow: hidden;
         }
+        .content #overview {
+            text-align: center;
+        }
         h2 {
             margin: 2em 0;
             color: #333;
         }
         .section {
             margin: 2em auto;
-            text-align: center;
         }
         .container {
             padding: 0 10em 2em;
@@ -30,6 +32,9 @@
         }
         .btn-group, .input-group, .radio-group, .checkbox-group, .select-group{
             margin: 2em 0;
+        }
+        .input-group input {
+            margin-top: 1em;
         }
         #overview {
             padding: 6em 0 12em;
@@ -46,10 +51,15 @@
             display: none;
             font-size: 1.2em;
             padding: 0 1em;
-            border-left: 3px solid #2196f3;
+            border-left: 2px solid #2196f3;
         }
         .code-wrap .hidecode {
             display: none;
+        }
+        .code-wrap .hidecode, .code-wrap .showcode {
+            color: #69c;
+            border: 1px solid #69c;
+            background-color: #fff;
         }
         textarea.code {
             display: none;
@@ -85,13 +95,13 @@
     </header>
     <section class="sidebar">
        <div>
-          <h3 class="hd">简介</h3>
+          <h3 class="hd">Overview</h3>
           <ul class="navigator">
              <li><a href="#overview" class="active">简介</a></li>
           </ul>
        </div>
        <div>
-          <h3 class="hd">组件</h3>
+          <h3 class="hd">Components</h3>
           <ul class="navigator">
              <li><a href="#tab">Tab</a></li>
              <li><a href="#table">Table</a></li>
@@ -99,7 +109,7 @@
           </ul>
        </div>
        <div>
-          <h3 class="hd">表单元素</h3>
+          <h3 class="hd">Form</h3>
           <ul class="navigator">
              <li><a href="#button">Button</a></li>
              <li><a href="#input">Input</a></li>
@@ -110,16 +120,16 @@
           </ul>
        </div>
        <div>
-          <h3 class="hd">布局</h3>
+          <h3 class="hd">Layout</h3>
           <ul class="navigator">
              <li><a href="#header">Header</a></li>
              <li><a href="#sidebar">Sidebar</a></li>
-             <li><a href="#sidebar">Footer</a></li>
+             <li><a href="#footer">Footer</a></li>
           </ul>
        </div>
     </section>
     <div class="content">
-        <section class="section bg-grey">
+        <section id="overview" class="section bg-grey">
             <section id="overview" class="grid-hero container grid-960">
                 <h3>yoyo.css</h3>
                 <p><strong>yoyo.css</strong> is a lightweight CSS framework.</p>
@@ -133,6 +143,9 @@
         </section>
        <section id="tab" class="section bg-grey container">
             <h2>Tab</h2>
+            <div class="description">
+                <p></p>
+            </div>
             <ul class="tab">
                 <li class="tab-item">
                     <a href="#" class="active">tab 1</a>
@@ -145,8 +158,8 @@
                 </li>
             </ul>
             <div class="code-wrap">
-                <button class="btn btn-primary showcode" onclick="showcode(this)">show code</button>
-                <button class="btn btn-primary hidecode" onclick="hidecode(this)">hide code</button>
+                <button class="btn showcode" onclick="showcode(this)">show code</button>
+                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
 <textarea class="code">
 
 <ul class="tab">
@@ -168,6 +181,9 @@
         </section>
         <section id="table" class="section bg-grey container">
             <h2>Table</h2>
+            <div class="description">
+                <p></p>
+            </div>
             <table class="data-table">
                 <thead>
                     <tr>
@@ -196,8 +212,8 @@
                 </tbody>
             </table>
             <div class="code-wrap">
-                <button class="btn btn-primary showcode" onclick="showcode(this)">show code</button>
-                <button class="btn btn-primary hidecode" onclick="hidecode(this)">hide code</button>
+                <button class="btn showcode" onclick="showcode(this)">show code</button>
+                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
 <textarea class="code">
 
 <table class="data-table">
@@ -235,6 +251,9 @@
         </section>
         <section id="pagination" class="section bg-grey container">
             <h2>Pagination</h2>
+            <div class="description">
+                <p></p>
+            </div>
             <div class="pagination">
                 <span class="total">共<em>36815</em>条</span>
                 <span class="pages">
@@ -252,14 +271,58 @@
                     <a href="#" class="page">下一页</a>
                 </span>
             </div>
+            <div class="code-wrap">
+                <button class="btn showcode" onclick="showcode(this)">show code</button>
+                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
+<textarea class="code">
+
+<div class="pagination">
+    <span class="total">共<em>36815</em>条</span>
+    <span class="pages">
+        <a href="#" class="page disabled" >上一页</a>
+        <a href="#" class="page">1</a>
+        <a href="#" class="page">2</a>
+        <a href="#" class="page">3</a>
+        <a href="#" class="page current">4</a>
+        <a href="#" class="page">5</a>
+        <a href="#" class="page">6</a>
+        <a href="#" class="page">7</a>
+        <a href="#" class="page">8</a>
+        <em class="page ellipsis">⋯</em>
+        <a href="#" class="page">1841</a>
+        <a href="#" class="page">下一页</a>
+    </span>
+</div></textarea>
+                <pre>
+                    <code class="language-markup">
+                    </code>
+                </pre>
+            </div>
         </section>
         <section id="button" class="section bg-grey container">
             <h2>Button</h2>
+            <div class="description">
+                <p></p>
+            </div>
             <div class="btn-group">
                 <button class="btn">button</button>
                 <button class="btn btn-primary">primary button</button>
                 <button class="btn btn-info">info button</button>
                 <button class="btn btn-white">white button</button>
+            </div>
+            <div class="code-wrap">
+                <button class="btn showcode" onclick="showcode(this)">show code</button>
+                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
+<textarea class="code">
+
+<button class="btn">button</button>
+<button class="btn btn-primary">primary button</button>
+<button class="btn btn-info">info button</button>
+<button class="btn btn-white">white button</button></textarea>
+                <pre>
+                    <code class="language-markup">
+                    </code>
+                </pre>
             </div>
             <div class="btn-group">
                 <button class="btn btn-mini">mini button</button>
@@ -267,14 +330,53 @@
                 <button class="btn btn-medium">medium button</button>
                 <button class="btn btn-big">big button</button>
             </div>
+            <div class="code-wrap">
+                <button class="btn showcode" onclick="showcode(this)">show code</button>
+                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
+<textarea class="code">
+
+<button class="btn btn-mini">mini button</button>
+<button class="btn btn-small">small button</button>
+<button class="btn btn-medium">medium button</button>
+<button class="btn btn-big">big button</button></textarea>
+                <pre>
+                    <code class="language-markup">
+                    </code>
+                </pre>
+            </div>
             <div class="btn-group">
                 <button class="btn disabled">disabled button</button>
                 <button class="btn btn-round">round button</button>
+            </div>
+            <div class="code-wrap">
+                <button class="btn showcode" onclick="showcode(this)">show code</button>
+                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
+<textarea class="code">
+
+<button class="btn disabled">disabled button</button>
+<button class="btn btn-round">round button</button></textarea>
+                <pre>
+                    <code class="language-markup">
+                    </code>
+                </pre>
             </div>
             <div class="btn-group">
                 <button class="btn btn-primary btn-round">primary round button</button>
                 <button class="btn btn-primary btn-big btn-round">big primary round button</button>
                 <button class="btn btn-white btn-mini btn-round">mini white round button</button>
+            </div>
+            <div class="code-wrap">
+                <button class="btn showcode" onclick="showcode(this)">show code</button>
+                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
+<textarea class="code">
+
+<button class="btn btn-primary btn-round">primary round button</button>
+<button class="btn btn-primary btn-big btn-round">big primary round button</button>
+<button class="btn btn-white btn-mini btn-round">mini white round button</button></textarea>
+                <pre>
+                    <code class="language-markup">
+                    </code>
+                </pre>
             </div>
         </section>
         <section id="input" class="section bg-grey container">
@@ -284,16 +386,57 @@
                 <input type="text" placeholder="普通文本输入框"/>
                 <input type="text" class="size-big" placeholder="大输入框"/>
             </div>
+            <div class="code-wrap">
+                <button class="btn showcode" onclick="showcode(this)">show code</button>
+                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
+<textarea class="code">
+
+<input type="text" class="size-small" placeholder="小输入框"/>
+<input type="text" placeholder="普通文本输入框"/>
+<input type="text" class="size-big" placeholder="大输入框"/></textarea>
+                <pre>
+                    <code class="language-markup">
+                    </code>
+                </pre>
+            </div>
             <div class="input-group">
                 <input type="text" placeholder="普通文本输入框"/>
                 <input type="password" placeholder="密码输入框"/>
                 <input type="url" placeholder="url输入框"/>
                 <input type="number" placeholder="数字输入框"/>
             </div>
+            <div class="code-wrap">
+                <button class="btn showcode" onclick="showcode(this)">show code</button>
+                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
+<textarea class="code">
+
+<input type="text" placeholder="普通文本输入框"/>
+<input type="password" placeholder="密码输入框"/>
+<input type="url" placeholder="url输入框"/>
+<input type="number" placeholder="数字输入框"/></textarea>
+                <pre>
+                    <code class="language-markup">
+                    </code>
+                </pre>
+            </div>
             <div class="input-group">
                 <input type="text" disabled placeholder="disabled输入框" value="disabled"/>
                 <input type="text" readonly placeholder="只读输入框" value="这是个只读输入框"/>
                 <input type="text" class="error" placeholder="输入框报错" value="输入错误"/>
+            </div>
+            <div class="code-wrap">
+                <button class="btn showcode" onclick="showcode(this)">show code</button>
+                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
+<textarea class="code">
+
+<input type="text" disabled placeholder="disabled输入框" value="disabled"/>
+<input type="text" readonly placeholder="只读输入框" value="这是个只读输入框"/>
+<input type="text" class="error" placeholder="输入框报错" value="输入错误"/></textarea>
+                <pre>
+                    <code class="language-markup">
+                    </code>
+                </pre>
+            </div>
         </section>
         <section id="select" class="section bg-grey container">
             <h2>Select</h2>
@@ -320,6 +463,37 @@
                     <option value="4">毛氏红烧肉</option>
                 </select>
             </div>
+            <div class="code-wrap">
+                <button class="btn showcode" onclick="showcode(this)">show code</button>
+                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
+<textarea class="code">
+
+<select>
+    <option value="0">湘菜</option>
+    <option value="1">口味蛇</option>
+    <option value="2">双椒鱼头</option>
+    <option value="3">回锅肉</option>
+    <option value="4">毛氏红烧肉</option>
+</select>
+<select class="size-small">
+    <option value="0">湘菜</option>
+    <option value="1">麻辣小龙虾</option>
+    <option value="2">双椒鱼头</option>
+    <option value="3">回锅肉</option>
+    <option value="4">毛氏红烧肉</option>
+</select>
+<select class="size-big">
+    <option value="0">湘菜</option>
+    <option value="1">口味虾</option>
+    <option value="2">双椒鱼头</option>
+    <option value="3">回锅肉</option>
+    <option value="4">毛氏红烧肉</option>
+</select></textarea>
+                <pre>
+                    <code class="language-markup">
+                    </code>
+                </pre>
+            </div>
             <div class="select-group">
                 <select disabled>
                     <option value="0">湘菜</option>
@@ -334,6 +508,29 @@
                     <option value="2" checked>不放油</option>
                     <option value="3">口味清淡</option>
                 </select>
+            </div>
+            <div class="code-wrap">
+                <button class="btn showcode" onclick="showcode(this)">show code</button>
+                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
+<textarea class="code">
+
+<select disabled>
+    <option value="0">湘菜</option>
+    <option value="1">臭豆腐</option>
+    <option value="2" checked>双椒鱼头</option>
+    <option value="3">回锅肉</option>
+    <option value="4">毛氏红烧肉</option>
+</select>
+<select class="error">
+    <option value="0">其他菜系</option>
+    <option value="1">不放辣椒</option>
+    <option value="2" checked>不放油</option>
+    <option value="3">口味清淡</option>
+</select></textarea>
+                <pre>
+                    <code class="language-markup">
+                    </code>
+                </pre>
             </div>
         </section>
         <section id="radio" class="section bg-grey container">
@@ -352,6 +549,28 @@
                        <input type="radio" name="group1" value="v4" checked><i></i>radio4
                 </label>
             </div>
+            <div class="code-wrap">
+                <button class="btn showcode" onclick="showcode(this)">show code</button>
+                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
+<textarea class="code">
+
+<label>
+       <input type="radio" name="group1" value="v1"><i></i>radio1
+</label>
+<label>
+       <input type="radio" name="group1" value="v2"><i></i>radio2
+</label>
+<label>
+       <input type="radio" name="group1" value="v3"><i></i>radio3
+   </label>
+<label>
+       <input type="radio" name="group1" value="v4" checked><i></i>radio4
+</label></textarea>
+                <pre>
+                    <code class="language-markup">
+                    </code>
+                </pre>
+            </div>
             <div class="radio-group">
                 <label>
                        <input type="radio" name="group2" value="v1"><i></i>radio1
@@ -365,6 +584,28 @@
                 <label>
                        <input type="radio" name="group2" value="v4"><i></i>radio4
                 </label>
+            </div>
+            <div class="code-wrap">
+                <button class="btn showcode" onclick="showcode(this)">show code</button>
+                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
+<textarea class="code">
+
+<label>
+       <input type="radio" name="group2" value="v1"><i></i>radio1
+</label>
+<label>
+       <input type="radio" name="group2" value="v2" disabled checked><i></i>选中且禁用
+</label>
+<label>
+       <input type="radio" name="group2" disabled value="v3"><i></i>禁用
+   </label>
+<label>
+       <input type="radio" name="group2" value="v4"><i></i>radio4
+</label></textarea>
+                <pre>
+                    <code class="language-markup">
+                    </code>
+                </pre>
             </div>
         </section>
         <section id="checkbox" class="section bg-grey container">
@@ -383,6 +624,28 @@
                        <input type="checkbox" value="v4"><i></i>checkbox4
                 </label>
             </div>
+            <div class="code-wrap">
+                <button class="btn showcode" onclick="showcode(this)">show code</button>
+                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
+<textarea class="code">
+
+<label>
+       <input type="checkbox" value="v1" checked><i></i>checkbox1
+</label>
+<label>
+       <input type="checkbox" value="v2"><i></i>checkbox2
+</label>
+<label>
+       <input type="checkbox" value="v3"><i></i>checkbox3
+   </label>
+<label>
+       <input type="checkbox" value="v4"><i></i>checkbox4
+</label></textarea>
+                <pre>
+                    <code class="language-markup">
+                    </code>
+                </pre>
+            </div>
             <div class="checkbox-group">
                 <label>
                        <input type="checkbox" value="v1"><i></i>checkbox1
@@ -397,6 +660,28 @@
                        <input type="checkbox" value="v4"><i></i>checkbox4
                 </label>
             </div>
+            <div class="code-wrap">
+                <button class="btn showcode" onclick="showcode(this)">show code</button>
+                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
+<textarea class="code">
+
+<label>
+       <input type="checkbox" value="v1"><i></i>checkbox1
+</label>
+<label>
+       <input type="checkbox" value="v2" disabled checked><i></i>选中且禁用
+</label>
+<label>
+       <input type="checkbox" value="v3" disabled><i></i>禁用
+   </label>
+<label>
+       <input type="checkbox" value="v4"><i></i>checkbox4
+</label></textarea>
+                <pre>
+                    <code class="language-markup">
+                    </code>
+                </pre>
+            </div>
         </section>
         <section id="textarea" class="section bg-grey container">
             <h2>Textarea</h2>
@@ -406,6 +691,24 @@
 4、锅中加水烧沸后，将鱼头连碗一同放入锅中蒸熟（约需10分钟）。
 5、将蒜茸和葱碎铺在鱼头上，再蒸一分钟。
 6、从锅中取出碗后，再将炒锅置火上放油烧至十成热，铲起淋在鱼头上即成。</textarea>
+            <div class="code-wrap">
+                <button class="btn showcode" onclick="showcode(this)">show code</button>
+                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
+<textarea class="code">
+
+<textarea cols="80" rows="10">
+    1、将鱼头洗净切成两半，鱼头背相连，泡红椒剁碎，葱切碎，姜块切末，蒜半个剁细末。
+    2、然后将鱼头放在碗里，然后抹上油。
+    3、在鱼头上撒上剁椒、姜末、盐、豆豉、料酒。
+    4、锅中加水烧沸后，将鱼头连碗一同放入锅中蒸熟（约需10分钟）。
+    5、将蒜茸和葱碎铺在鱼头上，再蒸一分钟。
+    6、从锅中取出碗后，再将炒锅置火上放油烧至十成热，铲起淋在鱼头上即成。
+&lt;/textarea&gt;</textarea>
+                <pre>
+                    <code class="language-markup">
+                    </code>
+                </pre>
+            </div>
         </section>
         <section id="header" class="section bg-grey container">
             <h2>Header</h2>
@@ -435,22 +738,163 @@
                     <li><a href="javascript:;">导航二</a></li>
                 </ul>
             </header>
+            <div class="code-wrap">
+                <button class="btn showcode" onclick="showcode(this)">show code</button>
+                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
+<textarea class="code">
+
+<header class="header">
+    <h1 class="logo">
+        <a href="/">yoyo.css</a>
+    </h1>
+    <div id="login_info">
+       <div class="signed">
+          <span class="uname">您好，yoyo.css</span>
+          <ul class="user-menu">
+             <li>
+                <a href="javascript:;">个人设置</a>
+             </li>
+             <li>
+                <a href="javascript:;" class="logout">退出账户</a>
+             </li>
+          </ul>
+       </div>
+       <ul class="unsigned" style="display: none;">
+          <li><a href="javascript:;">登录</a></li>
+       </ul>
+    </div>
+    <ul class="nav">
+        <li><a href="/" class="active">首页</a></li>
+        <li><a href="javascript:;">导航一</a></li>
+        <li><a href="javascript:;">导航二</a></li>
+    </ul>
+</header></textarea>
+                <pre>
+                    <code class="language-markup">
+                    </code>
+                </pre>
+            </div>
         </section>
         <section id="sidebar" class="section bg-grey container">
             <h2>Sidebar</h2>
             <p>效果见左侧</p>
+            <div class="code-wrap">
+                <button class="btn showcode" onclick="showcode(this)">show code</button>
+                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
+<textarea class="code">
+
+<section class="sidebar">
+   <div>
+      <h3 class="hd">Overview</h3>
+      <ul class="navigator">
+         <li><a href="#overview" class="active">简介</a></li>
+      </ul>
+   </div>
+   <div>
+      <h3 class="hd">Components</h3>
+      <ul class="navigator">
+         <li><a href="#tab">Tab</a></li>
+         <li><a href="#table">Table</a></li>
+         <li><a href="#pagination">Pagination</a></li>
+      </ul>
+   </div>
+   <div>
+      <h3 class="hd">Form</h3>
+      <ul class="navigator">
+         <li><a href="#button">Button</a></li>
+         <li><a href="#input">Input</a></li>
+         <li><a href="#select">Select</a></li>
+         <li><a href="#radio">Radio</a></li>
+         <li><a href="#checkbox">Checkbox</a></li>
+         <li><a href="#textarea">Textarea</a></li>
+      </ul>
+   </div>
+   <div>
+      <h3 class="hd">Layout</h3>
+      <ul class="navigator">
+         <li><a href="#header">Header</a></li>
+         <li><a href="#sidebar">Sidebar</a></li>
+         <li><a href="#footer">Footer</a></li>
+      </ul>
+   </div>
+</section></textarea>
+                <pre>
+                    <code class="language-markup">
+                    </code>
+                </pre>
+            </div>
         </section>
         <section id="footer" class="section bg-grey container">
             <h2>Footer</h2>
             <p>效果见底侧</p>
+            <div class="code-wrap">
+                <button class="btn showcode" onclick="showcode(this)">show code</button>
+                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
+<textarea class="code">
+
+<footer class="footer">
+    Copyright © yoyo.css 2005-2016  All Rights Reserved yoyo.css 京ICP证666666号
+</footer></textarea>
+                <pre>
+                    <code class="language-markup">
+                    </code>
+                </pre>
+            </div>
         </section>
         <footer class="footer">
             Copyright © yoyo.css 2005-2016  All Rights Reserved yoyo.css 京ICP证666666号
         </footer>
     </div>
     <script>
+        /**
+         * 频率控制 返回函数连续调用时，func 执行频率限定为 次 / wait
+         *
+         * @param  {function}   func      传入函数
+         * @param  {number}     wait      表示时间窗口的间隔
+         * @param  {object}     options   如果想忽略开始边界上的调用，传入{leading: false}。
+         *                                如果想忽略结尾边界上的调用，传入{trailing: false}
+         * @return {function}             返回客户调用函数
+         */
+        function throttle (func, wait, options) {
+          var context, args, result;
+          var timeout = null;
+          // 上次执行时间点
+          var previous = 0;
+          if (!options) options = {};
+          // 延迟执行函数
+          var later = function() {
+            // 若设定了开始边界不执行选项，上次执行时间始终为0
+            previous = options.leading === false ? 0 : new Date().getTime();
+            timeout = null;
+            result = func.apply(context, args);
+            if (!timeout) context = args = null;
+          };
+          return function() {
+            var now = new Date().getTime();
+            // 首次执行时，如果设定了开始边界不执行选项，将上次执行时间设定为当前时间。
+            if (!previous && options.leading === false) previous = now;
+            // 延迟执行时间间隔
+            var remaining = wait - (now - previous);
+            context = this;
+            args = arguments;
+            // 延迟时间间隔remaining小于等于0，表示上次执行至此所间隔时间已经超过一个时间窗口
+            // remaining大于时间窗口wait，表示客户端系统时间被调整过
+            if (remaining <= 0 || remaining > wait) {
+              clearTimeout(timeout);
+              timeout = null;
+              previous = now;
+              result = func.apply(context, args);
+              if (!timeout) context = args = null;
+            //如果延迟执行不存在，且没有设定结尾边界不执行选项
+            } else if (!timeout && options.trailing !== false) {
+              timeout = setTimeout(later, remaining);
+            }
+            return result;
+          };
+        };
+
         // 页面滚动时间，将 sidebar 固定在页面左侧
-        function sidebarScroll() {
+        function windowScroll() {
             var sidebar = document.querySelector('.sidebar');
             var cls = sidebar.className;
             if(window.scrollY > 50){
@@ -460,6 +904,10 @@
             }else {
                 sidebar.className = cls.replace(/\bfix-sidebar\b/g, '');
             }
+            document.querySelector('.sidebar a.active').classList.remove('active');
+            var sections = Array.from(document.querySelectorAll('.content > section'));
+            var currentId = sections.filter(s => s.getBoundingClientRect().top > 0)[0].id;
+            document.querySelector('[href="#'+currentId+'"]').classList.add('active');
         }
 
         // 退出操作
@@ -470,7 +918,7 @@
             unsignedEle.style.display = "block";
         }
 
-        // 导航操作
+        // 导航点击操作
         function sidebarClick(e) {
             if(e.target.tagName === 'A') {
                 var activeEle = document.querySelector('.sidebar .active');
@@ -500,16 +948,16 @@
             var logoutEle = document.querySelector('.logout');
             var sidebarEle = document.querySelector('.sidebar');
             if (document.addEventListener) {
-                document.addEventListener('scroll', sidebarScroll, false);
+                document.addEventListener('scroll', throttle(windowScroll, 500), false);
                 sidebarEle.addEventListener('click', sidebarClick, false);
                 logoutEle.addEventListener('click', logout, false);
             } else if (document.attachEvent)  {
-                document.attachEvent('scroll', sidebarScroll);
+                document.attachEvent('scroll', throttle(windowScroll, 500));
                 sidebarEle.attachEvent('click', sidebarClick);
                 logoutEle.attachEvent('click', logout);
             }
             //初始执行一次计算sidebar的位置
-            sidebarScroll();
+            windowScroll();
         }
     </script>
     <script src="./resource/prism.js"></script>

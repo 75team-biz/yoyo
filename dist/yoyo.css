@@ -422,13 +422,13 @@ button {
 .data-table {
     width: 100%;
     font-size: 12px;
+    text-align: left;
     margin: 1em 0;
     border: 1px solid #eee;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, .1);
 
     & th, td {
         padding: 1em .67em;
-        text-align: left;
         white-space: nowrap;
         max-width: 600px;
         text-overflow: ellipsis;
