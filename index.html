@@ -6,6 +6,7 @@
     <title>yoyo.css - a lightweight CSS framework</title>
     <link rel="stylesheet" href="./dist/yoyo.css" />
     <link rel="stylesheet" href="./resource/prism.css" />
+    <link href="https://fonts.googleapis.com/css?family=Oregano" rel="stylesheet">
     <style>
         .content {
             padding: 0 23px;
@@ -23,6 +24,10 @@
             margin: 2em 0;
             color: #333;
         }
+        .logo-font {
+            font-family: 'Oregano', cursive;
+            color: #2196f3;
+        }
         .section {
             margin: 2em auto;
         }
@@ -37,11 +42,11 @@
             margin-top: 1em;
         }
         #overview {
-            padding: 6em 0 12em;
+            padding: 3em 0 12em;
         }
         #overview h3 {
             padding: 2em 0;
-            font-size: 3em;
+            font-size: 4em;
         }
         .code-wrap {
             text-align: left;
@@ -73,13 +78,13 @@
         </h1>
         <div id="login_info">
            <div class="signed">
-              <span class="uname">您好，yoyo.css</span>
+              <span class="uname">hello，yoyo.css</span>
               <ul class="user-menu">
                  <li>
-                    <a href="#">个人设置</a>
+                    <a href="#">setting</a>
                  </li>
                  <li>
-                    <a href="#" class="logout">退出账户</a>
+                    <a href="#" class="logout">logout</a>
                  </li>
               </ul>
            </div>
@@ -97,7 +102,7 @@
        <div>
           <h3 class="hd">Overview</h3>
           <ul class="navigator">
-             <li><a href="#overview" class="active">简介</a></li>
+             <li><a href="#overview" class="active">overview</a></li>
           </ul>
        </div>
        <div>
@@ -117,6 +122,7 @@
              <li><a href="#radio">Radio</a></li>
              <li><a href="#checkbox">Checkbox</a></li>
              <li><a href="#textarea">Textarea</a></li>
+             <li><a href="#form">Form</a></li>
           </ul>
        </div>
        <div>
@@ -129,16 +135,15 @@
        </div>
     </section>
     <div class="content">
-        <section id="overview" class="section bg-grey">
-            <section id="overview" class="grid-hero container grid-960">
-                <h3>yoyo.css</h3>
-                <p><strong>yoyo.css</strong> is a lightweight CSS framework.</p>
-                <section class="notes text-center">
-                    <div class="btn-group">
-                        <a href="https://github.com/zhouweicsu/yoyo" target="_blank" class="btn btn-primary">GitHub Repo</a>
-                        <a href="https://github.com/zhouweicsu/yoyo" target="_blank" class="btn btn-primary">Download</a>
-                    </div>
-                </section>
+        <section id="overview" class="section container bg-grey">
+            <h3 class="logo-font">yoyo.css</h3>
+            <p><span>yoyo.css</span> is a lightweight CSS framework.</p>
+            <p>Designed for IE9+, Chrome, Safari, and Firefox.</p>
+            <section class="notes text-center">
+                <div class="btn-group">
+                    <a href="https://github.com/zhouweicsu/yoyo" target="_blank" class="btn btn-primary">GitHub Repo</a>
+                    <a href="https://github.com/zhouweicsu/yoyo" target="_blank" class="btn btn-primary">Download</a>
+                </div>
             </section>
         </section>
        <section id="tab" class="section bg-grey container">
@@ -704,6 +709,131 @@
     5、将蒜茸和葱碎铺在鱼头上，再蒸一分钟。
     6、从锅中取出碗后，再将炒锅置火上放油烧至十成热，铲起淋在鱼头上即成。
 &lt;/textarea&gt;</textarea>
+                <pre>
+                    <code class="language-markup">
+                    </code>
+                </pre>
+            </div>
+        </section>
+        <section id="form" class="section bg-grey container">
+            <h2>Form</h2>
+            <form class="form">
+               <dl class="item">
+                  <dt class="label">登录用户：</dt>
+                  <dd class="control">yoyo.css</dd>
+               </dl>
+               <dl class="item">
+                  <dt class="label"><span class="required">*</span>真实姓名：</dt>
+                  <dd class="control">
+                    <input type="text" maxlength="10" required="required" class="size-big">
+                  </dd>
+               </dl>
+               <dl class="item">
+                  <dt class="label"><span class="required">*</span>联系电话：</dt>
+                  <dd class="control">
+                    <input type="text" required="required">
+                  </dd>
+               </dl>
+               <dl class="item">
+                  <dt class="label"><span class="required">*</span>性别：</dt>
+                  <dd class="control">
+                  <label><input type="radio" name="gender" value="female"><i></i>女</label>
+                  <label><input type="radio" name="gender" value="male"><i></i>男</label>
+                  </dd>
+               </dl>
+               <dl class="item">
+                  <dt class="label"><span class="required">*</span>申请权限：</dt>
+                  <dd class="control">
+                      <select class="size-small">
+                          <option value="0">普通</option>
+                          <option value="1">高级</option>
+                      </select>
+                  </dd>
+               </dl>
+               <dl class="item">
+                  <dt class="label">申请理由：</dt>
+                  <dd class="control">
+                    <textarea cols="80" rows="10"></textarea>
+                  </dd>
+               </dl>
+               <dl class="item">
+                  <dt class="label"></dt>
+                  <dd class="control">
+                  <label><input type="checkbox" value="1">
+                      <i></i>
+                      <a href="javascript:;">同意注册协议</a>
+                  </label>
+                  </dd>
+               </dl>
+               <dl class="item">
+                  <dt class="label"></dt>
+                  <dd class="control">
+                    <button type="submit" class="btn btn-primary">保存</button>
+                    <button class="btn btn-default">取消</button>
+                  </dd>
+               </dl>
+            </form>
+            <div class="code-wrap">
+                <button class="btn showcode" onclick="showcode(this)">show code</button>
+                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
+<textarea class="code">
+
+<form class="form">
+   <dl class="item">
+      <dt class="label">登录用户：</dt>
+      <dd class="control">yoyo.css</dd>
+   </dl>
+   <dl class="item">
+      <dt class="label"><span class="required">*</span>真实姓名：</dt>
+      <dd class="control">
+        <input type="text" maxlength="10" required="required" class="size-big">
+      </dd>
+   </dl>
+   <dl class="item">
+      <dt class="label"><span class="required">*</span>联系电话：</dt>
+      <dd class="control">
+        <input type="text" required="required">
+      </dd>
+   </dl>
+   <dl class="item">
+      <dt class="label"><span class="required">*</span>性别：</dt>
+      <dd class="control">
+      <label><input type="radio" name="gender" value="female"><i></i>女</label>
+      <label><input type="radio" name="gender" value="male"><i></i>男</label>
+      </dd>
+   </dl>
+   <dl class="item">
+      <dt class="label"><span class="required">*</span>申请权限：</dt>
+      <dd class="control">
+          <select class="size-small">
+              <option value="0">普通</option>
+              <option value="1">高级</option>
+          </select>
+      </dd>
+   </dl>
+   <dl class="item">
+      <dt class="label">申请理由：</dt>
+      <dd class="control">
+        <textarea cols="80" rows="10">&lt;/textarea&gt;
+      </dd>
+   </dl>
+   <dl class="item">
+      <dt class="label"></dt>
+      <dd class="control">
+      <label><input type="checkbox" value="1">
+          <i></i>
+          <a href="javascript:;">同意注册协议</a>
+      </label>
+      </dd>
+   </dl>
+   <dl class="item">
+      <dt class="label"></dt>
+      <dd class="control">
+        <button type="submit" class="btn btn-primary">保存</button>
+        <button class="btn btn-default">取消</button>
+      </dd>
+   </dl>
+</form></textarea>
                 <pre>
                     <code class="language-markup">
                     </code>

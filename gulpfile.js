@@ -33,7 +33,11 @@ gulp.task('uglify', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('./src/**/*.css', ['css']);
+    gulp.watch('./src/**/*.css', ['css', 'uglify', 'resource']);
 });
 
-gulp.task('default', ['css', 'uglify', 'watch']);
+gulp.task('resource', function () {
+    gulp.src(['./resource/imgs/**/*']).pipe(gulp.dest('./dist/imgs'));
+});
+
+gulp.task('default', ['css', 'uglify', 'resource', 'watch']);

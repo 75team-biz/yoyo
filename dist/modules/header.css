@@ -52,10 +52,10 @@ button {
 }
 
 .header .logo a {
-    background: url(http://p2.qhmsg.com/d/inn/20f52ec0/logo.png) no-repeat 0;
-    background-size: auto 18px;
+    background: url(imgs/yoyocss-resize-logo-white.png) no-repeat 0;
+    background-size: auto 40px;
     display: block;
-    width: 206px;
+    width: 200px;
     height: 50px;
     text-indent: -1000%;
     overflow: hidden;

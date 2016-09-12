@@ -13,10 +13,10 @@
         float: left;
         margin-right: 50px;
         & a {
-            background: url(http://p2.qhmsg.com/d/inn/20f52ec0/logo.png) no-repeat left center;
-            background-size: auto 18px;
+            background: url(./imgs/yoyocss-resize-logo-white.png) no-repeat left center;
+            background-size: auto 40px;
             display: block;
-            width: 206px;
+            width: 200px;
             height: 50px;
             text-indent: -1000%;
             overflow: hidden;

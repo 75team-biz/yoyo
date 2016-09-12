@@ -149,10 +149,10 @@ button {
 }
 
 .header .logo a {
-    background: url(http://p2.qhmsg.com/d/inn/20f52ec0/logo.png) no-repeat 0;
-    background-size: auto 18px;
+    background: url(imgs/yoyocss-resize-logo-white.png) no-repeat 0;
+    background-size: auto 40px;
     display: block;
-    width: 206px;
+    width: 200px;
     height: 50px;
     text-indent: -1000%;
     overflow: hidden;
@@ -565,6 +565,106 @@ button {
 
 .single-page .ui-pagination {
     display: none;
+}
+
+.form:after, .form:before {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+
+.form:after {
+    clear: both;
+}
+
+.form .item {
+    width: 100%;
+    margin-bottom: .83em;
+    line-height: 2.5;
+}
+
+.form .item:after, .form .item:before {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+
+.form .item:after {
+    clear: both;
+}
+
+.form .label {
+    display: block;
+    float: left;
+    padding-right: .5em;
+    color: #666;
+    line-height: 3;
+    min-height: 10px;
+    min-width: 80px;
+    text-align: right;
+}
+
+.form .label .required {
+    font-weight: 700;
+    color: red;
+}
+
+.form .label.right {
+    min-width: 7em;
+    text-align: right;
+}
+
+.form .control {
+    line-height: 3;
+    min-height: 10px;
+    padding-bottom: 1px;
+}
+
+.form .control .tips {
+    font-size: 12px;
+    color: #999;
+}
+
+.form .note {
+    background: #ffc;
+    border: 1px solid #ffdd9a;
+    padding: 5px 15px;
+}
+
+.form .links {
+    line-height: 1.5;
+}
+
+.form .input-date {
+    width: 80px;
+}
+
+.form a:not(.btn) {
+    color: #777;
+}
+
+.form a:not(.btn):hover {
+    color: #2196f3;
+}
+
+.form em {
+    padding-left: 10px;
+}
+
+.form-inline {
+    margin: 1em 0;
+}
+
+.form-inline .item {
+    float: left;
+    margin-right: 2em;
+    margin-bottom: .83em;
+    width: auto;
+}
+
+.form-inline .item .control, .form-inline .item .label {
+    display: inline-block;
+    width: auto;
 }
 
 .btn {
