@@ -1027,17 +1027,21 @@
         function windowScroll() {
             var sidebar = document.querySelector('.sidebar');
             var cls = sidebar.className;
-            if(window.scrollY > 50){
+            if(window.pageYOffset > 50){
                 if( cls.indexOf('fix-sidebar') == -1){
                     sidebar.className = cls + ' fix-sidebar';
                 }
             }else {
                 sidebar.className = cls.replace(/\bfix-sidebar\b/g, '');
             }
-            document.querySelector('.sidebar a.active').classList.remove('active');
-            var sections = Array.from(document.querySelectorAll('.content > section'));
-            var currentId = sections.filter(s => s.getBoundingClientRect().top > 0)[0].id;
-            document.querySelector('[href="#'+currentId+'"]').classList.add('active');
+            var activeEles = document.querySelector('.sidebar a.active');
+            activeEles.className = activeEles.className.replace(/\bactive\b/g, '');
+            var sections = Array.prototype.slice.call(document.querySelectorAll('.content > section'));
+            var currentId = sections.filter(function(s){
+                    return s.getBoundingClientRect().top > 0
+                })[0].id;
+            var currentEle = document.querySelector('[href="#'+currentId+'"]');
+            currentEle.className = currentEle.className + ' active';
         }
 
         // 退出操作
