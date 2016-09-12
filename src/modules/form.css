@@ -8,7 +8,7 @@
     @apply --clearfix;
     & .item {
         width: 100%;
-        margin-bottom: 0.83em;
+        margin-bottom: 0.84em;
         line-height: 2.5;
         @apply --clearfix;
     }
