@@ -30,10 +30,10 @@
     line-height: 35px;
     color: #888;
     padding-left: 25px;
+}
 
-    .fa {
-        padding-right: 10px;
-    }
+.sidebar .hd .fa {
+    padding-right: 10px;
 }
 
 .sidebar .navigator {

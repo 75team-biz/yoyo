@@ -99,9 +99,12 @@ a, a:hover {
     box-sizing: inherit;
 }
 
+body, html {
+    font: normal normal 12px/1.6 Helvetica, Microsoft Yahei, Sans-Serif;
+}
+
 body {
     min-width: 1200px;
-    font: normal normal 12px/1.6 Helvetica, Microsoft Yahei, Sans-Serif;
     background: #f5f7fa;
     box-sizing: border-box;
 }
@@ -335,10 +338,10 @@ button {
     line-height: 35px;
     color: #888;
     padding-left: 25px;
+}
 
-    .fa {
-        padding-right: 10px;
-    }
+.sidebar .hd .fa {
+    padding-right: 10px;
 }
 
 .sidebar .navigator {
@@ -428,14 +431,14 @@ button {
     margin: 1em 0;
     border: 1px solid #eee;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, .1);
+}
 
-    & th, td {
-        padding: 1em .67em;
-        white-space: nowrap;
-        max-width: 600px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-    }
+.data-table td, .data-table th {
+    padding: 1em .67em;
+    white-space: nowrap;
+    max-width: 600px;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .data-table thead th {
@@ -459,10 +462,6 @@ button {
     background: #eaf3fd;
 }
 
-.data-table tbody tr:nth-child(even) {
-    background: #f5f7fa;
-}
-
 .data-table tfoot {
     font-weight: 700;
 }
@@ -472,8 +471,8 @@ button {
 }
 
 .data-table a {
-    &: #777;
-    &: 1em;
+    color: #777;
+    margin-left: 1em;
 }
 
 .data-table a:first-child {
@@ -482,6 +481,39 @@ button {
 
 .data-table a:hover {
     color: #2196f3;
+}
+
+.table-striped tbody tr:nth-child(even) {
+    background: #e9ecef;
+}
+
+.table-bordered td, .table-bordered th {
+    border: 1px solid #eee;
+}
+
+.table-sorted th {
+    cursor: pointer;
+}
+
+.table-sorted th span {
+    position: relative;
+    display: inline-block;
+    width: 1em;
+    height: 1.1em;
+    margin-left: 5px;
+}
+
+.table-sorted th span .fa {
+    position: absolute;
+    color: #b9c1c7;
+}
+
+.table-sorted th span .fa-caret-down {
+    top: 6px;
+}
+
+.table-sorted th span .fa.active {
+    color: #7e8c99;
 }
 
 .pagination {
@@ -512,11 +544,12 @@ button {
     margin-left: -1px;
     background: #f8f8f8;
     color: #7e7e7e;
+    text-decoration: none;
+}
 
-    text-decoration:none &:hover {
-        background: #f0f0f0;
-        color: #2196f3;
-    }
+.pagination .page:hover {
+    background: #f0f0f0;
+    color: #2196f3;
 }
 
 .pagination .page.current {
@@ -670,6 +703,7 @@ button {
 }
 
 .btn {
+    position: relative;
     display: inline-block;
     padding: .36em .8em;
     margin-bottom: 0;
@@ -799,6 +833,26 @@ button {
     border: 1px solid #218de6;
 }
 
+.btn.close:before {
+    display: block;
+    position: absolute;
+    right: -4px;
+    top: -4px;
+    content: "×";
+    background: #f46054;
+    border-radius: 50%;
+    width: 16px;
+    line-height: 16px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn.close.btn-round:before {
+    right: 0;
+}
+
 input::-ms-clear {
     display: none;
 }
@@ -810,7 +864,6 @@ input[type=url] {
     background-color: #fff;
     height: 2.5em;
     line-height: normal;
-    line-height: 2.5\9;
     padding: 0 .4em;
     width: 200px;
     margin-right: 5px;
@@ -931,14 +984,13 @@ input[type=checkbox]:checked+i:hover, input[type=radio]:checked+i:hover {
     box-shadow: inset 0 0 3px 0 #2196f3;
 }
 
-label:hover {
-    input[type=radio]+i {
-        box-shadow: inset 0 0 3px 0 #aaa;
-    }
+label:hover input[type=radio]+i {
+    box-shadow: inset 0 0 3px 0 #aaa;
+}
 
-    input[type=checkbox]:checked+i, input[type=radio]:checked+i {
-        box-shadow: inset 0 0 3px 0 #2196f3;
-    }
+label:hover input[type=checkbox]:checked+i,
+label:hover input[type=radio]:checked+i {
+    box-shadow: inset 0 0 3px 0 #2196f3;
 }
 
 input[type=checkbox]+i:after, input[type=radio]+i:after {
@@ -1001,7 +1053,7 @@ select {
 
 select:focus {
     outline: none;
-    border-color: lighten($primary-color, 10);
+    border-color: #9ed1fa;
 }
 
 select .error {

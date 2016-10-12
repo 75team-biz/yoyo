@@ -31,7 +31,7 @@
         line-height: 35px;
         color: #888;
         padding-left: 25px;
-        .fa {
+        & .fa {
             padding-right: 10px;
         }
     }

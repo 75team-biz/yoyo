@@ -2,9 +2,12 @@
     box-sizing: inherit;
 }
 
+body, html {
+    font: normal normal 12px/1.6 Helvetica, Microsoft Yahei, Sans-Serif;
+}
+
 body {
     min-width: 1200px;
-    font: normal normal 12px/1.6 Helvetica, Microsoft Yahei, Sans-Serif;
     background: #f5f7fa;
     box-sizing: border-box;
 }
@@ -44,14 +47,14 @@ button {
     margin: 1em 0;
     border: 1px solid #eee;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, .1);
+}
 
-    & th, td {
-        padding: 1em .67em;
-        white-space: nowrap;
-        max-width: 600px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-    }
+.data-table td, .data-table th {
+    padding: 1em .67em;
+    white-space: nowrap;
+    max-width: 600px;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .data-table thead th {
@@ -75,10 +78,6 @@ button {
     background: #eaf3fd;
 }
 
-.data-table tbody tr:nth-child(even) {
-    background: #f5f7fa;
-}
-
 .data-table tfoot {
     font-weight: 700;
 }
@@ -88,8 +87,8 @@ button {
 }
 
 .data-table a {
-    &: #777;
-    &: 1em;
+    color: #777;
+    margin-left: 1em;
 }
 
 .data-table a:first-child {
@@ -98,4 +97,37 @@ button {
 
 .data-table a:hover {
     color: #2196f3;
+}
+
+.table-striped tbody tr:nth-child(even) {
+    background: #e9ecef;
+}
+
+.table-bordered td, .table-bordered th {
+    border: 1px solid #eee;
+}
+
+.table-sorted th {
+    cursor: pointer;
+}
+
+.table-sorted th span {
+    position: relative;
+    display: inline-block;
+    width: 1em;
+    height: 1.1em;
+    margin-left: 5px;
+}
+
+.table-sorted th span .fa {
+    position: absolute;
+    color: #b9c1c7;
+}
+
+.table-sorted th span .fa-caret-down {
+    top: 6px;
+}
+
+.table-sorted th span .fa.active {
+    color: #7e8c99;
 }

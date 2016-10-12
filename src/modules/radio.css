@@ -38,12 +38,12 @@ input[type="checkbox"]:checked+ i{
 }
 
 label:hover {
-    input[type="radio"] + i {
+    & input[type="radio"] + i {
         box-shadow: inset 0 0 3px 0 #aaa;
     }
 
-    input[type="radio"]:checked + i,
-    input[type="checkbox"]:checked+ i{
+    & input[type="radio"]:checked + i,
+    & input[type="checkbox"]:checked+ i{
         box-shadow: inset 0 0 3px 0 var(--primary-color);
     }
 }

@@ -2,9 +2,12 @@
     box-sizing: inherit;
 }
 
+body, html {
+    font: normal normal 12px/1.6 Helvetica, Microsoft Yahei, Sans-Serif;
+}
+
 body {
     min-width: 1200px;
-    font: normal normal 12px/1.6 Helvetica, Microsoft Yahei, Sans-Serif;
     background: #f5f7fa;
     box-sizing: border-box;
 }
@@ -38,6 +41,7 @@ button {
 }
 
 .btn {
+    position: relative;
     display: inline-block;
     padding: .36em .8em;
     margin-bottom: 0;
@@ -165,4 +169,24 @@ button {
     color: #fff;
     background-color: #218de6;
     border: 1px solid #218de6;
+}
+
+.btn.close:before {
+    display: block;
+    position: absolute;
+    right: -4px;
+    top: -4px;
+    content: "×";
+    background: #f46054;
+    border-radius: 50%;
+    width: 16px;
+    line-height: 16px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn.close.btn-round:before {
+    right: 0;
 }

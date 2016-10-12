@@ -2,9 +2,12 @@
     box-sizing: inherit;
 }
 
+body, html {
+    font: normal normal 12px/1.6 Helvetica, Microsoft Yahei, Sans-Serif;
+}
+
 body {
     min-width: 1200px;
-    font: normal normal 12px/1.6 Helvetica, Microsoft Yahei, Sans-Serif;
     background: #f5f7fa;
     box-sizing: border-box;
 }
@@ -60,7 +63,7 @@ select {
 
 select:focus {
     outline: none;
-    border-color: lighten($primary-color, 10);
+    border-color: #9ed1fa;
 }
 
 select .error {
