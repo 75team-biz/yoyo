@@ -2,9 +2,12 @@
     box-sizing: inherit;
 }
 
+body, html {
+    font: normal normal 12px/1.6 Helvetica, Microsoft Yahei, Sans-Serif;
+}
+
 body {
     min-width: 1200px;
-    font: normal normal 12px/1.6 Helvetica, Microsoft Yahei, Sans-Serif;
     background: #f5f7fa;
     box-sizing: border-box;
 }
@@ -48,7 +51,6 @@ input[type=url] {
     background-color: #fff;
     height: 2.5em;
     line-height: normal;
-    line-height: 2.5\9;
     padding: 0 .4em;
     width: 200px;
     margin-right: 5px;

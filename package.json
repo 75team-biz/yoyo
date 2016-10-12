@@ -4,7 +4,8 @@
   "description": "A lightweight CSS framework for faster and extensible development.",
   "main": "yoyo.css",
   "scripts": {
-    "watch": "node node_modules/webpack/bin/webpack.js -w"
+    "watch": "node node_modules/webpack/bin/webpack.js -w",
+    "server":"python -m SimpleHTTPServer  9091 "
   },
   "repository": {
     "type": "git",

@@ -21,7 +21,7 @@ select {
     margin-right: 5px;
     &:focus {
         outline: none;
-        border-color: lighten($primary-color, 10);
+        border-color: color(var(--primary-color) lightness(80%));
     }
     & .error {
         border-color: #EF9B6D;

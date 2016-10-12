@@ -3,6 +3,9 @@
 * {
     box-sizing: inherit;
 }
+html {
+    font: normal normal 12px/1.6 var(--text-font);
+}
 body {
     min-width: var(--min-window-width);
     font: normal normal 12px/1.6 var(--text-font);

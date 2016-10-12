@@ -2,6 +2,7 @@
 @import '../base/common.css';
 
 .btn {
+    position: relative;
     display: inline-block;
     padding: 0.36em 0.8em;
     margin-bottom: 0;
@@ -119,5 +120,27 @@
         color: #fff;
         background-color: color(var(--primary-color) blackness(10%));
         border: 1px solid  color(var(--primary-color) blackness(10%));
+    }
+}
+
+/** Close Button **/
+.btn.close {
+    &:before {
+        display: block;
+        position: absolute;
+        right: -4px;
+        top: -4px;
+        content: "×";
+        background: #f46054;
+        border-radius: 50%;
+        width: 16px;
+        line-height: 16px;
+        color: #fff;
+        font-weight: 700;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    &.btn-round:before {
+        right: 0px;
     }
 }

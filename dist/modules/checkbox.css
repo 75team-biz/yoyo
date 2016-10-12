@@ -2,9 +2,12 @@
     box-sizing: inherit;
 }
 
+body, html {
+    font: normal normal 12px/1.6 Helvetica, Microsoft Yahei, Sans-Serif;
+}
+
 body {
     min-width: 1200px;
-    font: normal normal 12px/1.6 Helvetica, Microsoft Yahei, Sans-Serif;
     background: #f5f7fa;
     box-sizing: border-box;
 }
@@ -70,14 +73,13 @@ input[type=checkbox]:checked+i:hover, input[type=radio]:checked+i:hover {
     box-shadow: inset 0 0 3px 0 #2196f3;
 }
 
-label:hover {
-    input[type=radio]+i {
-        box-shadow: inset 0 0 3px 0 #aaa;
-    }
+label:hover input[type=radio]+i {
+    box-shadow: inset 0 0 3px 0 #aaa;
+}
 
-    input[type=checkbox]:checked+i, input[type=radio]:checked+i {
-        box-shadow: inset 0 0 3px 0 #2196f3;
-    }
+label:hover input[type=checkbox]:checked+i,
+label:hover input[type=radio]:checked+i {
+    box-shadow: inset 0 0 3px 0 #2196f3;
 }
 
 input[type=checkbox]+i:after, input[type=radio]+i:after {
