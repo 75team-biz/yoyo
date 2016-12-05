@@ -94,15 +94,17 @@ function showcode(e, specifyNode) {
     var codeEle = e.parentElement.querySelector('pre code');
     code = beautify_HTML(code);
     codeEle.innerHTML = Prism.highlight(code, Prism.languages.markup);
-    codeEle.parentElement.style.display = "block";
-    e.style.display = "none";
-    e.nextElementSibling.style.display = "block";
+    codeEle.parentElement.style.display = "block";// 显示代码
+    e.style.display = "none";// 隐藏 showcode button
+    e.nextElementSibling.style.display = "inline-block";// 显示 hidecode button
+    e.nextElementSibling.nextElementSibling.style.display = "inline-block";// 显示 copycode button
 }
 //隐藏代码
 function hidecode(e) {
-    e.style.display = "none";
-    e.previousElementSibling.style.display = "block";
-    e.nextElementSibling.style.display = "none";
+    e.style.display = "none";// 隐藏 hidecode button
+    e.previousElementSibling.style.display = "block";// 显示 showcode button
+    e.nextElementSibling.style.display = "none";// 隐藏 copycode button
+    e.nextElementSibling.nextElementSibling.style.display = "none";// 隐藏代码
 }
 //复制代码
 function copycode(e, specifyNode) {
@@ -110,25 +112,59 @@ function copycode(e, specifyNode) {
     if(specifyNode){
         code = document.querySelector('.'+specifyNode).outerHTML;
     }else {
-        code = e.parentElement.parentElement.previousElementSibling.outerHTML;
+        code = e.parentElement.previousElementSibling.outerHTML;
     }
     code = beautify_HTML(code);
     copyTextToClipboard(code);
 }
 
-window.onload = function() {
-    // 退出操作
-    var logoutEle = document.querySelector('.logout');
-    var sidebarEle = document.querySelector('.sidebar');
-    if (document.addEventListener) {
-        document.addEventListener('scroll', throttle(windowScroll, 500), false);
-        sidebarEle.addEventListener('click', sidebarClick, false);
-        logoutEle.addEventListener('click', logout, false);
-    } else if (document.attachEvent)  {
-        document.attachEvent('scroll', throttle(windowScroll, 500));
-        sidebarEle.attachEvent('click', sidebarClick);
-        logoutEle.attachEvent('click', logout);
+//显示dialog
+function showDialog(e) {
+    e.nextElementSibling.style.display = 'block';
+}
+function hideDialog(e) {
+    targetClass = e.target.className;
+    if(targetClass.indexOf('dialog-confirm')>-1 || targetClass.indexOf('dialog-cancel')>-1 || targetClass.indexOf('close')>-1){
+        document.querySelectorAll('.dialog-box').forEach(function(db){
+            db.style.display = 'none';
+        });
     }
+}
+
+function bindEvent(ele, events, func) {
+    if(document.addEventListener) {
+        ele.addEventListener(events, func, false);
+    }else if(document.attachEvent) {
+        ele.attachEvent(events, func);
+    }
+}
+
+window.alert = function(msg) {
+    var alertBox =  document.querySelector('.yoyo-alert');
+    alertBox.querySelector('.msg-wrap').innerHTML = msg;
+    alertBox.style.display = 'block';
+}
+
+window.onload = function() {
+    // 代码操作
+    var codeWrapEles = document.querySelectorAll('.code-wrap');
+    codeWrapEles.forEach(function(cw){
+        var specifyClasses = cw.dataset.specify;
+        specifyClasses = (specifyClasses) ? ',\'' + specifyClasses + '\'' : '';
+        cw.innerHTML = '<button class="btn showcode" onclick="showcode(this'+specifyClasses+')">show code</button>'
+                + '<button class="btn hidecode" onclick="hidecode(this)">hide code</button>'
+                + '<button class="btn copycode" onclick="copycode(this'+specifyClasses+')">copy</button>'
+                + '<pre class="language-markup"><code class="language-markup"></code></pre>';
+    });
+    // 事件绑定
+    bindEvent(document, 'scroll',throttle(windowScroll, 500));
+    bindEvent(document.querySelector('.sidebar'), 'click', sidebarClick);
+    bindEvent(document.querySelector('.logout'), 'click', logout);
+    bindEvent(document.querySelector('#dialog'), 'click', hideDialog);
+    bindEvent(document.querySelector('#alert'), 'click', hideDialog);
+    bindEvent(document.querySelector('#warn'), 'click', hideDialog);
+    bindEvent(document.querySelector('#confirm'), 'click', hideDialog);
+    bindEvent(document.querySelector('.yoyo-alert'), 'click', hideDialog);
     //初始执行一次计算sidebar的位置
     windowScroll();
 }
