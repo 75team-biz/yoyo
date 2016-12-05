@@ -125,7 +125,7 @@ function showDialog(e) {
 function hideDialog(e) {
     targetClass = e.target.className;
     if(targetClass.indexOf('dialog-confirm')>-1 || targetClass.indexOf('dialog-cancel')>-1 || targetClass.indexOf('close')>-1){
-        document.querySelectorAll('.dialog-box').forEach(function(db){
+        Array.prototype.slice.call(document.querySelectorAll('.dialog-box')).forEach(function(db){
             db.style.display = 'none';
         });
     }
