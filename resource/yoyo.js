@@ -140,14 +140,14 @@ function bindEvent(ele, events, func) {
 }
 
 window.alert = function(msg) {
-    var alertBox =  document.querySelector('.yoyo-alert');
+    var alertBox = document.querySelector('.yoyo-alert');
     alertBox.querySelector('.msg-wrap').innerHTML = msg;
     alertBox.style.display = 'block';
 }
 
 window.onload = function() {
     // 代码操作
-    var codeWrapEles = document.querySelectorAll('.code-wrap');
+    var codeWrapEles = Array.prototype.slice.call(document.querySelectorAll('.code-wrap'));
     codeWrapEles.forEach(function(cw){
         var specifyClasses = cw.dataset.specify;
         specifyClasses = (specifyClasses) ? ',\'' + specifyClasses + '\'' : '';
