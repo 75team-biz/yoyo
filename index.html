@@ -53,7 +53,7 @@
         #overview p {
             font-size: 1.2em;
         }
-        #overview p a {
+        .description a, #overview p a {
             color: #2196f3;
         }
         pre .btn-clipboard {
@@ -81,10 +81,10 @@
             padding: 0.5em 1em;
             border-left: 2px solid #2196f3;
         }
-        .code-wrap .hidecode {
+        .code-wrap .hidecode, .code-wrap .copycode {
             display: none;
         }
-        .code-wrap .hidecode, .code-wrap .showcode {
+        .code-wrap .hidecode, .code-wrap .showcode, .code-wrap .copycode {
             color: #69c;
             border: 1px solid #69c;
             background-color: #fff;
@@ -143,7 +143,7 @@
        </div>
        <div>
           <h3 class="hd">
-                <i class="fa fa-list-alt" aria-hidden="true"></i>
+                <i class="fa fa-wpforms" aria-hidden="true"></i>
             Form</h3>
           <ul class="navigator">
              <li><a href="#button">Button</a></li>
@@ -153,6 +153,17 @@
              <li><a href="#checkbox">Checkbox</a></li>
              <li><a href="#textarea">Textarea</a></li>
              <li><a href="#form">Form</a></li>
+          </ul>
+       </div>
+       <div>
+          <h3 class="hd">
+                <i class="fa fa-bullhorn" aria-hidden="true"></i>
+            Notification</h3>
+          <ul class="navigator">
+             <li><a href="#dialog">Dialog</a></li>
+             <li><a href="#alert">Alert</a></li>
+             <li><a href="#warn">Warn</a></li>
+             <li><a href="#confirm">Confirm</a></li>
           </ul>
        </div>
        <div>
@@ -167,7 +178,7 @@
        </div>
     </section>
     <div class="content">
-        <section id="overview" class="section container bg-grey">
+        <section id="overview" class="section container  ">
             <h3 class="logo-font">yoyo.css</h3>
             <p><span>yoyo.css</span> is a lightweight CSS framework.</p>
             <p>Designed for IE9+, Chrome, Safari, and Firefox.</p>
@@ -179,7 +190,7 @@
                 </div>
             </section>
         </section>
-       <section id="tab" class="section bg-grey container">
+       <section id="tab" class="section   container">
             <h2>Tab</h2>
             <div class="description">
                 <p></p>
@@ -195,13 +206,9 @@
                     <a href="#">tab 3</a>
                 </li>
             </ul>
-            <div class="code-wrap">
-                <button class="btn showcode" onclick="showcode(this)">show code</button>
-                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
-                <pre><span class="btn-clipboard" onclick="copycode(this)">copy</span><code class="language-markup"></code></pre>
-            </div>
+            <div class="code-wrap"></div>
         </section>
-        <section id="table" class="section bg-grey container">
+        <section id="table" class="section   container">
             <h2>Table</h2>
             <div class="description">
                 <p></p>
@@ -241,11 +248,7 @@
                     </tr>
                 </tbody>
             </table>
-            <div class="code-wrap">
-                <button class="btn showcode" onclick="showcode(this)">show code</button>
-                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
-                <pre><span class="btn-clipboard" onclick="copycode(this)">copy</span><code class="language-markup"></code></pre>
-            </div>
+            <div class="code-wrap"></div>
             <p>隔行换色 Table</p>
             <table class="data-table table-striped">
                 <thead>
@@ -288,11 +291,7 @@
                     </tr>
                 </tbody>
             </table>
-            <div class="code-wrap">
-                <button class="btn showcode" onclick="showcode(this)">show code</button>
-                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
-                <pre><span class="btn-clipboard" onclick="copycode(this)">copy</span><code class="language-markup"></code></pre>
-            </div>
+            <div class="code-wrap"></div>
             <p>边框 Table</p>
             <table class="data-table table-bordered">
                 <thead>
@@ -335,11 +334,7 @@
                     </tr>
                 </tbody>
             </table>
-            <div class="code-wrap">
-                <button class="btn showcode" onclick="showcode(this)">show code</button>
-                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
-                <pre><span class="btn-clipboard" onclick="copycode(this)">copy</span><code class="language-markup"></code></pre>
-            </div>
+            <div class="code-wrap"></div>
             <p>排序 Table</p>
             <table class="data-table table-sorted">
                 <thead>
@@ -382,13 +377,9 @@
                     </tr>
                 </tbody>
             </table>
-            <div class="code-wrap">
-                <button class="btn showcode" onclick="showcode(this)">show code</button>
-                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
-                <pre><span class="btn-clipboard" onclick="copycode(this)">copy</span><code class="language-markup"></code></pre>
-            </div>
+            <div class="code-wrap"></div>
         </section>
-        <section id="pagination" class="section bg-grey container">
+        <section id="pagination" class="section   container">
             <h2>Pagination</h2>
             <div class="description">
                 <p></p>
@@ -410,13 +401,9 @@
                     <a href="#" class="page">下一页</a>
                 </span>
             </div>
-            <div class="code-wrap">
-                <button class="btn showcode" onclick="showcode(this)">show code</button>
-                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
-                <pre><span class="btn-clipboard" onclick="copycode(this)">copy</span><code class="language-markup"></code></pre>
-            </div>
+            <div class="code-wrap"></div>
         </section>
-        <section id="button" class="section bg-grey container">
+        <section id="button" class="section   container">
             <h2>Button</h2>
             <div class="description">
                 <p></p>
@@ -427,88 +414,56 @@
                 <button class="btn btn-info">info button</button>
                 <button class="btn btn-white">white button</button>
             </div>
-            <div class="code-wrap">
-                <button class="btn showcode" onclick="showcode(this)">show code</button>
-                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
-                <pre><span class="btn-clipboard" onclick="copycode(this)">copy</span><code class="language-markup"></code></pre>
-            </div>
+            <div class="code-wrap"></div>
             <div class="btn-group">
                 <button class="btn btn-mini">mini button</button>
                 <button class="btn btn-small">small button</button>
                 <button class="btn btn-medium">medium button</button>
                 <button class="btn btn-big">big button</button>
             </div>
-            <div class="code-wrap">
-                <button class="btn showcode" onclick="showcode(this)">show code</button>
-                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
-                <pre><span class="btn-clipboard" onclick="copycode(this)">copy</span><code class="language-markup"></code></pre>
-            </div>
+            <div class="code-wrap"></div>
             <div class="btn-group">
                 <button class="btn disabled">disabled button</button>
                 <button class="btn btn-round">round button</button>
             </div>
-            <div class="code-wrap">
-                <button class="btn showcode" onclick="showcode(this)">show code</button>
-                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
-                <pre><span class="btn-clipboard" onclick="copycode(this)">copy</span><code class="language-markup"></code></pre>
-            </div>
+            <div class="code-wrap"></div>
             <div class="btn-group">
                 <button class="btn btn-primary btn-round">primary round button</button>
                 <button class="btn btn-primary btn-big btn-round">big primary round button</button>
                 <button class="btn btn-white btn-mini btn-round">mini white round button</button>
             </div>
-            <div class="code-wrap">
-                <button class="btn showcode" onclick="showcode(this)">show code</button>
-                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
-                <pre><span class="btn-clipboard" onclick="copycode(this)">copy</span><code class="language-markup"></code></pre>
-            </div>
+            <div class="code-wrap"></div>
             <div class="btn-group">
                 <button class="btn close">close button</button>
                 <button class="btn btn-primary close">primary close button</button>
                 <button class="btn btn-round close">round close button</button>
                 <button class="btn btn-primary btn-big btn-round close">big primary round close button</button>
             </div>
-            <div class="code-wrap">
-                <button class="btn showcode" onclick="showcode(this)">show code</button>
-                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
-                <pre><span class="btn-clipboard" onclick="copycode(this)">copy</span><code class="language-markup"></code></pre>
-            </div>
+            <div class="code-wrap"></div>
         </section>
-        <section id="input" class="section bg-grey container">
+        <section id="input" class="section   container">
             <h2>Input</h2>
             <div class="input-group">
                 <input type="text" class="size-small" placeholder="小输入框"/>
                 <input type="text" placeholder="普通文本输入框"/>
                 <input type="text" class="size-big" placeholder="大输入框"/>
             </div>
-            <div class="code-wrap">
-                <button class="btn showcode" onclick="showcode(this)">show code</button>
-                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
-                <pre><span class="btn-clipboard" onclick="copycode(this)">copy</span><code class="language-markup"></code></pre>
-            </div>
+            <div class="code-wrap"></div>
             <div class="input-group">
                 <input type="text" placeholder="普通文本输入框"/>
                 <input type="password" placeholder="密码输入框"/>
                 <input type="url" placeholder="url输入框"/>
                 <input type="number" placeholder="数字输入框"/>
             </div>
-            <div class="code-wrap">
-                <button class="btn showcode" onclick="showcode(this)">show code</button>
-                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
-                <pre><span class="btn-clipboard" onclick="copycode(this)">copy</span><code class="language-markup"></code></pre>
-            </div>
+            <div class="code-wrap"></div>
             <div class="input-group">
                 <input type="text" disabled placeholder="disabled输入框" value="disabled"/>
                 <input type="text" readonly placeholder="只读输入框" value="这是个只读输入框"/>
                 <input type="text" class="error" placeholder="输入框报错" value="输入错误"/>
             </div>
-            <div class="code-wrap">
-                <button class="btn showcode" onclick="showcode(this)">show code</button>
-                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
-                <pre><span class="btn-clipboard" onclick="copycode(this)">copy</span><code class="language-markup"></code></pre>
-            </div>
+            <div class="code-wrap"></div>
         </section>
-        <section id="select" class="section bg-grey container">
+        <section id="select" class="section   container">
             <h2>Select</h2>
             <div class="select-group">
                 <select>
@@ -533,11 +488,7 @@
                     <option value="4">毛氏红烧肉</option>
                 </select>
             </div>
-            <div class="code-wrap">
-                <button class="btn showcode" onclick="showcode(this)">show code</button>
-                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
-                <pre><span class="btn-clipboard" onclick="copycode(this)">copy</span><code class="language-markup"></code></pre>
-            </div>
+            <div class="code-wrap"></div>
             <div class="select-group">
                 <select disabled>
                     <option value="0">湘菜</option>
@@ -553,13 +504,9 @@
                     <option value="3">口味清淡</option>
                 </select>
             </div>
-            <div class="code-wrap">
-                <button class="btn showcode" onclick="showcode(this)">show code</button>
-                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
-                <pre><span class="btn-clipboard" onclick="copycode(this)">copy</span><code class="language-markup"></code></pre>
-            </div>
+            <div class="code-wrap"></div>
         </section>
-        <section id="radio" class="section bg-grey container">
+        <section id="radio" class="section   container">
             <h2>Radio</h2>
             <div class="radio-group">
                 <label>
@@ -575,11 +522,7 @@
                        <input type="radio" name="group1" value="v4" checked><i></i>radio4
                 </label>
             </div>
-            <div class="code-wrap">
-                <button class="btn showcode" onclick="showcode(this)">show code</button>
-                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
-                <pre><span class="btn-clipboard" onclick="copycode(this)">copy</span><code class="language-markup"></code></pre>
-            </div>
+            <div class="code-wrap"></div>
             <div class="radio-group">
                 <label>
                        <input type="radio" name="group2" value="v1"><i></i>radio1
@@ -594,13 +537,9 @@
                        <input type="radio" name="group2" value="v4"><i></i>radio4
                 </label>
             </div>
-            <div class="code-wrap">
-                <button class="btn showcode" onclick="showcode(this)">show code</button>
-                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
-                <pre><span class="btn-clipboard" onclick="copycode(this)">copy</span><code class="language-markup"></code></pre>
-            </div>
+            <div class="code-wrap"></div>
         </section>
-        <section id="checkbox" class="section bg-grey container">
+        <section id="checkbox" class="section   container">
             <h2>Checkbox</h2>
             <div class="checkbox-group">
                 <label>
@@ -616,11 +555,7 @@
                        <input type="checkbox" value="v4"><i></i>checkbox4
                 </label>
             </div>
-            <div class="code-wrap">
-                <button class="btn showcode" onclick="showcode(this)">show code</button>
-                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
-                <pre><span class="btn-clipboard" onclick="copycode(this)">copy</span><code class="language-markup"></code></pre>
-            </div>
+            <div class="code-wrap"></div>
             <div class="checkbox-group">
                 <label>
                        <input type="checkbox" value="v1"><i></i>checkbox1
@@ -635,13 +570,9 @@
                        <input type="checkbox" value="v4"><i></i>checkbox4
                 </label>
             </div>
-            <div class="code-wrap">
-                <button class="btn showcode" onclick="showcode(this)">show code</button>
-                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
-                <pre><span class="btn-clipboard" onclick="copycode(this)">copy</span><code class="language-markup"></code></pre>
-            </div>
+            <div class="code-wrap"></div>
         </section>
-        <section id="textarea" class="section bg-grey container">
+        <section id="textarea" class="section   container">
             <h2>Textarea</h2>
             <textarea cols="80" rows="10">1、将鱼头洗净切成两半，鱼头背相连，泡红椒剁碎，葱切碎，姜块切末，蒜半个剁细末。
 2、然后将鱼头放在碗里，然后抹上油。
@@ -649,13 +580,9 @@
 4、锅中加水烧沸后，将鱼头连碗一同放入锅中蒸熟（约需10分钟）。
 5、将蒜茸和葱碎铺在鱼头上，再蒸一分钟。
 6、从锅中取出碗后，再将炒锅置火上放油烧至十成热，铲起淋在鱼头上即成。</textarea>
-            <div class="code-wrap">
-                <button class="btn showcode" onclick="showcode(this)">show code</button>
-                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
-                <pre><span class="btn-clipboard" onclick="copycode(this)">copy</span><code class="language-markup"></code></pre>
-            </div>
+            <div class="code-wrap"></div>
         </section>
-        <section id="form" class="section bg-grey container">
+        <section id="form" class="section   container">
             <h2>Form</h2>
             <form class="form">
                <dl class="item">
@@ -713,13 +640,83 @@
                   </dd>
                </dl>
             </form>
-            <div class="code-wrap">
-                <button class="btn showcode" onclick="showcode(this)">show code</button>
-                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
-                <pre><span class="btn-clipboard" onclick="copycode(this)">copy</span><code class="language-markup"></code></pre>
-            </div>
+            <div class="code-wrap"></div>
         </section>
-        <section id="header" class="section bg-grey container">
+        <section id="dialog" class="section container">
+            <h2>Dialog</h2>
+            <p class="description"><a href="https://github.com/zhouweicsu/vue-dialog" target="_blank">Vue component</a></p>
+            <button class="btn btn-primary btn-big" onclick="showDialog(this)">Click Me!</button>
+            <div class="dialog-box">
+                <div class="dialog" style="width:400px;margin-left:-200px;margin-top:-53px;">
+                    <div class="dialog-hd">标题——普通弹出框<a class="fa fa-times close"></a></div>
+                    <div class="dialog-bd">
+                        <p style="padding: 20px;"> common dialog </p>
+                    </div>
+                </div>
+                <div class="dialog-mask"></div>
+            </div>
+            <div class="code-wrap"></div>
+        </section>
+        <section id="alert" class="section container">
+            <h2>Alert</h2>
+            <button class="btn btn-primary btn-big" onclick="showDialog(this)">Click Me!</button>
+            <div class="dialog-box alert">
+                <div class="dialog public-dialog" style="width:250px;margin-left:-125px;margin-top:-60px;">
+                    <div class="dialog-bd">
+                        <div class="msg-wrap">
+                            <span>alert</span>
+                        </div>
+                        <div class="btn-wrap">
+                            <a href="javascript:;" class="btn btn-primary dialog-confirm" >确定</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-mask"></div>
+            </div>
+            <div class="code-wrap"></div>
+        </section>
+        <section id="warn" class="section container">
+            <h2>Warn</h2>
+            <button class="btn btn-primary btn-big" onclick="showDialog(this)">Click Me!</button>
+            <div class="dialog-box warn">
+                <div class="dialog public-dialog" style="width: 250px;margin-left: -125px;margin-top:-60px;">
+                    <div class="dialog-bd">
+                        <div class="msg-wrap">
+                            <i class="fa fa-exclamation-triangle icon icon-warn"></i>
+                            <span>警告 - warn</span>
+                        </div>
+                        <div class="btn-wrap">
+                            <a href="javascript:;" class="btn btn-primary dialog-confirm">确定</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-mask"></div>
+            </div>
+            <div class="code-wrap"></div>
+        </section>
+        <section id="confirm" class="section container">
+            <h2>Confirm</h2>
+            <button class="btn btn-primary btn-big" onclick="showDialog(this)">Click Me!</button>
+            <div class="dialog-box confirm">
+                <div class="dialog public-dialog" style="width:250px;margin-left:-125px;margin-top:-75px;">
+                    <div class="dialog-bd">
+                        <div class="msg-wrap">
+                            <i class="fa fa-exclamation-triangle icon icon-confirm"></i>
+                            <span>确定删除吗？
+                                <p style="color:#999;">警告：一旦删除，不可恢复</p>
+                            </span>
+                        </div>
+                        <div class="btn-wrap">
+                            <a href="javascript:;" class="btn btn-primary dialog-confirm">确定</a>
+                            <a href="javascript:;" class="btn btn-default dialog-cancel">取消</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-mask"></div>
+            </div>
+            <div class="code-wrap"></div>
+        </section>
+        <section id="header" class="section   container">
             <h2>Header</h2>
             <header class="header">
                 <h1 class="logo">
@@ -747,33 +744,32 @@
                     <li><a href="javascript:;">导航二</a></li>
                 </ul>
             </header>
-            <div class="code-wrap">
-                <button class="btn showcode" onclick="showcode(this)">show code</button>
-                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
-                <pre><span class="btn-clipboard" onclick="copycode(this)">copy</span><code class="language-markup"></code></pre>
-            </div>
+            <div class="code-wrap"></div>
         </section>
-        <section id="sidebar" class="section bg-grey container">
+        <section id="sidebar" class="section   container">
             <h2>Sidebar</h2>
             <p>效果见左侧</p>
-            <div class="code-wrap">
-                <button class="btn showcode" onclick="showcode(this, 'sidebar')">show code</button>
-                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
-                <pre><span class="btn-clipboard" onclick="copycode(this, 'sidebar')">copy</span><code class="language-markup"></code></pre>
-            </div>
+            <div class="code-wrap" data-specify="sidebar"></div>
         </section>
-        <section id="footer" class="section bg-grey container">
+        <section id="footer" class="section   container">
             <h2>Footer</h2>
             <p>效果见底侧</p>
-            <div class="code-wrap">
-                <button class="btn showcode" onclick="showcode(this, 'footer')">show code</button>
-                <button class="btn hidecode" onclick="hidecode(this)">hide code</button>
-                <pre><span class="btn-clipboard" onclick="copycode(this, 'footer')">copy</span><code class="language-markup"></code></pre>
-            </div>
+            <div class="code-wrap" data-specify="footer"></div>
         </section>
         <footer class="footer">
             Copyright © yoyo.css 2005-2016  All Rights Reserved yoyo.css 京ICP证666666号
         </footer>
+       <div class="dialog-box yoyo-alert" style="display: none;">
+            <div class="dialog public-dialog" style="width:250px;margin-left:-125px;margin-top:-60px;">
+                <div class="dialog-bd">
+                    <div class="msg-wrap"></div>
+                    <div class="btn-wrap">
+                        <a href="javascript:;" class="btn btn-primary dialog-confirm"">确定</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dialog-mask"></div>
+        </div>
     </div>
     <script src="./resource/yoyo.js"></script>
     <script src="./resource/copycode.js"></script>

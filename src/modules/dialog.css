@@ -1,0 +1,79 @@
+.dialog-box {
+    display: none;
+}
+.dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 101;
+    background: white;
+    border: 1px solid #acacac;
+    box-shadow: 0 0 3px #b3b3b3;
+    min-width: 200px;
+    & .dialog-hd {
+        border-bottom: 1px solid #e8e8e8;
+        height: 34px;
+        line-height: 34px;
+        position: relative;
+        padding: 0 15px;
+        font-weight: bold;
+        & .close {
+            font-size: 16px;
+            right: 15px;
+            position: absolute;
+            top: 9px;
+        }
+    }
+}
+
+.dialog-mask {
+    background: black;
+    opacity: 0.6;
+    filter: alpha(opacity = 60);
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* common dialog : alert, confirm, warn*/
+
+.public-dialog {
+    box-shadow: 0 0 16px #333;
+    border-color: #333;
+    z-index: 102;
+    & .dialog-bd {
+        padding: 0;
+    }
+    & .msg-wrap {
+        padding: 2em;
+        min-width: 15em;
+        & span {
+            max-width: 40em;
+        }
+    }
+    & .btn-wrap {
+        text-align: center;
+        padding: 1em 2em;
+        background: #eee;
+    }
+    & .icon {
+        font-size: 16px;
+    }
+    & .icon-warn {
+        color: #ff4b21;
+    }
+    & .icon-confirm {
+        color: #FF9708;
+    }
+}
+
+.dialog-type-warn .icon-warn, .dialog-type-confirm .icon-confirm {
+    display: inline-block;
+}
+
+.dialog-type-alert .dialog-cancel, .dialog-type-warn .dialog-cancel {
+    display: none;
+}
