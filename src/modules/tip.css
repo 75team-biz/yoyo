@@ -1,11 +1,11 @@
-.question-tip {
+.tip {
     cursor: pointer;
     color: #8594b5;
-    .fa-question-circle-o {
+    & .fa-question-circle-o {
         font-size: 1.4em;
         position: relative;
     }
-    .tip-wrap {
+    & .tip-wrap {
         position: absolute;
         color: #73ace6;
         background: #f1f9fc;

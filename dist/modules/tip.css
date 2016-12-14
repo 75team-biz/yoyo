@@ -1,87 +1,87 @@
-.question-tip {
+.tip {
     cursor: pointer;
     color: #8594b5;
+}
 
-    .fa-question-circle-o {
-        font-size: 1.4em;
-        position: relative;
-    }
+.tip .fa-question-circle-o {
+    font-size: 1.4em;
+    position: relative;
+}
 
-    .tip-wrap {
-        color: #73ace6;
-        background: #f1f9fc;
-        background: rgba(241, 249, 252, .9);
-        padding: .5em;
-        font: normal normal 12px/1.6 Helvetica, Microsoft Yahei, Sans-Serif;
-        font-size: 16px;
-        font-size: 1rem;
-        line-height: 24px;
-        line-height: 1.5rem;
-        white-space: normal;
-        border: 1px solid #c0dfeb;
-        border-radius: .4em;
-        z-index: 1;
-    }
+.tip .tip-wrap {
+    color: #73ace6;
+    background: #f1f9fc;
+    background: rgba(241, 249, 252, .9);
+    padding: .5em;
+    font: normal normal 12px/1.6 Helvetica, Microsoft Yahei, Sans-Serif;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 24px;
+    line-height: 1.5rem;
+    white-space: normal;
+    border: 1px solid #c0dfeb;
+    border-radius: .4em;
+    z-index: 1;
+}
 
-    .tip-wrap, .tip-wrap:before {
-        position: absolute;
-    }
+.tip .tip-wrap, .tip .tip-wrap:before {
+    position: absolute;
+}
 
-    .tip-wrap:before {
-        content: '';
-        width: 5px;
-        height: 5px;
-        border-left: 1px solid #c0dfeb;
-        border-bottom: 1px solid #c0dfeb;
-        background: ##f1f9fc;
-        background: rgba(241, 249, 252, .9);
-        -webkit-transform: rotate(45deg);
-                transform: rotate(45deg);
-    }
+.tip .tip-wrap:before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-left: 1px solid #c0dfeb;
+    border-bottom: 1px solid #c0dfeb;
+    background: ##f1f9fc;
+    background: rgba(241, 249, 252, .9);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
 
-    .tip-wrap.right {
-        left: 25px;
-        top: -6px;
-    }
+.tip .tip-wrap.right {
+    left: 25px;
+    top: -6px;
+}
 
-    .tip-wrap.right:before {
-        top: 10px;
-        left: -4px;
-    }
+.tip .tip-wrap.right:before {
+    top: 10px;
+    left: -4px;
+}
 
-    .tip-wrap.left {
-        right: 28px;
-        top: -6px;
-    }
+.tip .tip-wrap.left {
+    right: 28px;
+    top: -6px;
+}
 
-    .tip-wrap.left:before {
-        top: 10px;
-        right: -4px;
-        -webkit-transform: rotate(-135deg);
-                transform: rotate(-135deg);
-    }
+.tip .tip-wrap.left:before {
+    top: 10px;
+    right: -4px;
+    -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+}
 
-    .tip-wrap.top {
-        left: -4px;
-        bottom: 20px;
-    }
+.tip .tip-wrap.top {
+    left: -4px;
+    bottom: 20px;
+}
 
-    .tip-wrap.top:before {
-        left: 7px;
-        bottom: -4px;
-        -webkit-transform: rotate(-45deg);
-                transform: rotate(-45deg);
-    }
+.tip .tip-wrap.top:before {
+    left: 7px;
+    bottom: -4px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
 
-    .tip-wrap.bottom {
-        left: -4px;
-        top: 20px;
-    }
+.tip .tip-wrap.bottom {
+    left: -4px;
+    top: 20px;
+}
 
-    .tip-wrap.bottom:before {
-        left: 7px;
-        top: -4px;
-        -webkit-transform: rotate(135deg);
-                transform: rotate(135deg);
-    }
+.tip .tip-wrap.bottom:before {
+    left: 7px;
+    top: -4px;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
 }
