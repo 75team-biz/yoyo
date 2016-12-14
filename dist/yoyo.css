@@ -1202,12 +1202,12 @@ select.size-big {
 
 .tip .tip-wrap.right {
     left: 2em;
-    top: -.4em;
+    top: -.5em;
 }
 
 .tip .tip-wrap.right:before {
-    top: .5em;
-    left: -.2em;
+    top: .9em;
+    left: -4px;
 }
 
 .tip .tip-wrap.left {
@@ -1216,32 +1216,32 @@ select.size-big {
 }
 
 .tip .tip-wrap.left:before {
-    top: .5em;
-    right: -.2em;
+    top: .9em;
+    right: -4px;
     -webkit-transform: rotate(-135deg);
             transform: rotate(-135deg);
 }
 
 .tip .tip-wrap.top {
-    left: -.2em;
+    left: -.5em;
     bottom: 2em;
 }
 
 .tip .tip-wrap.top:before {
     left: .5em;
-    bottom: -.2em;
+    bottom: -4px;
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
 }
 
 .tip .tip-wrap.bottom {
-    left: -.2em;
+    left: -.5em;
     top: 2em;
 }
 
 .tip .tip-wrap.bottom:before {
-    left: .5em;
-    top: -.2em;
+    left: .9em;
+    top: -4px;
     -webkit-transform: rotate(135deg);
             transform: rotate(135deg);
 }

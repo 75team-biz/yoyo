@@ -34,38 +34,38 @@
         }
         &.right {
             left: 2em;
-            top: -.4em;
+            top: -.5em;
             &:before {
-                top: .5em;
-                left: -.2em;
+                top: .9em;
+                left: -4px;
             }
         }
         &.left {
             right: 2em;
             top: -.4em;
             &:before {
-                top: .5em;
-                right: -.2em;
+                top: .9em;
+                right: -4px;
                 -ms-transform: rotate(-135deg);
                 transform: rotate(-135deg);
             }
         }
         &.top {
-            left: -.2em;
+            left: -.5em;
             bottom: 2em;
             &:before {
                 left: .5em;
-                bottom: -.2em;
+                bottom: -4px;
                 -ms-transform: rotate(-45deg);
                 transform: rotate(-45deg);
             }
         }
         &.bottom {
-            left: -.2em;
+            left: -.5em;
             top: 2em;
             &:before {
-                left: .5em;
-                top: -.2em;
+                left: .9em;
+                top: -4px;
                 -ms-transform: rotate(135deg);
                 transform: rotate(135deg);
             }
