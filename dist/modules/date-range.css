@@ -1,0 +1,41 @@
+.daterange .calendar-wrap {
+    position: absolute;
+    padding: .6em;
+    border: 1px solid #bbb;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, .1);
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, .2);
+    box-sizing: border-box;
+}
+
+.daterange .calendar {
+    position: relative;
+    display: inline-block;
+    box-shadow: none;
+    border: none;
+    height: 286px;
+}
+
+.daterange .range-str {
+    padding: 1em 0 .2em;
+    text-align: center;
+}
+
+.daterange .shortcut {
+    margin-bottom: .6em;
+    text-align: center;
+    background: #e7f4fd;
+}
+
+.daterange .shortcut span {
+    display: inline-block;
+    color: #218de6;
+    padding: .4em 1em;
+    cursor: pointer;
+}
+
+.daterange .operations {
+    position: absolute;
+    right: .6em;
+    bottom: .6em;
+}

@@ -1,0 +1,72 @@
+.question-tip {
+    cursor: pointer;
+    color: #8594b5;
+    .fa-question-circle-o {
+        font-size: 1.4em;
+        position: relative;
+    }
+    .tip-wrap {
+        position: absolute;
+        color: #73ace6;
+        background: #f1f9fc;
+        background: rgba(241, 249, 252, 0.9);
+        padding: .5em;
+        font: normal normal 12px/1.6 Helvetica, Microsoft Yahei, Sans-Serif;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        white-space: initial;
+        border: 1px solid #c0dfeb;
+        border-radius: 0.4em;
+        z-index: 999;
+        &:before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            border-left: 1px solid #c0dfeb;
+            border-bottom: 1px solid #c0dfeb;
+            position: absolute;
+            background: ##f1f9fc;
+            background: rgba(241, 249, 252, .9);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        &.right {
+            left: 25px;
+            top: -6px;
+            &:before {
+                top: 10px;
+                left: -4px;
+            }
+        }
+        &.left {
+            right: 28px;
+            top: -6px;
+            &:before {
+                top: 10px;
+                right: -4px;
+                -ms-transform: rotate(-135deg);
+                transform: rotate(-135deg);
+            }
+        }
+        &.top {
+            left: -4px;
+            bottom: 20px;
+            &:before {
+                left: 7px;
+                bottom: -4px;
+                -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }
+        }
+        &.bottom {
+            left: -4px;
+            top: 20px;
+            &:before {
+                left: 7px;
+                top: -4px;
+                -ms-transform: rotate(135deg);
+                transform: rotate(135deg);
+            }
+        }
+    }
+}
