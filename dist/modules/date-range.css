@@ -1,3 +1,21 @@
+.daterange {
+    width: 200px;
+}
+
+.daterange input[type=text]:-moz-read-only,
+.daterange input[type=text][readonly=readonly] {
+    border: 1px solid #e9e9e9;
+    background-color: #fff;
+    color: #666;
+}
+
+.daterange input[type=text]:read-only,
+.daterange input[type=text][readonly=readonly] {
+    border: 1px solid #e9e9e9;
+    background-color: #fff;
+    color: #666;
+}
+
 .daterange .calendar-wrap {
     position: absolute;
     padding: .6em;

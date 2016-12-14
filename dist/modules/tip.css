@@ -54,7 +54,7 @@
 
 .tip .tip-wrap.left {
     right: 2em;
-    top: -.4em;
+    top: -.5em;
 }
 
 .tip .tip-wrap.left:before {
@@ -70,7 +70,7 @@
 }
 
 .tip .tip-wrap.top:before {
-    left: .5em;
+    left: .9em;
     bottom: -4px;
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);

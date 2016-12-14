@@ -1212,7 +1212,7 @@ select.size-big {
 
 .tip .tip-wrap.left {
     right: 2em;
-    top: -.4em;
+    top: -.5em;
 }
 
 .tip .tip-wrap.left:before {
@@ -1228,7 +1228,7 @@ select.size-big {
 }
 
 .tip .tip-wrap.top:before {
-    left: .5em;
+    left: .9em;
     bottom: -4px;
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
@@ -1328,6 +1328,24 @@ select.size-big {
 
 .datepicker input[type=text]:read-only,
 .datepicker input[type=text][readonly=readonly] {
+    border: 1px solid #e9e9e9;
+    background-color: #fff;
+    color: #666;
+}
+
+.daterange {
+    width: 200px;
+}
+
+.daterange input[type=text]:-moz-read-only,
+.daterange input[type=text][readonly=readonly] {
+    border: 1px solid #e9e9e9;
+    background-color: #fff;
+    color: #666;
+}
+
+.daterange input[type=text]:read-only,
+.daterange input[type=text][readonly=readonly] {
     border: 1px solid #e9e9e9;
     background-color: #fff;
     color: #666;

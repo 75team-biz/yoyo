@@ -42,7 +42,7 @@
         }
         &.left {
             right: 2em;
-            top: -.4em;
+            top: -.5em;
             &:before {
                 top: .9em;
                 right: -4px;
@@ -54,7 +54,7 @@
             left: -.5em;
             bottom: 2em;
             &:before {
-                left: .5em;
+                left: .9em;
                 bottom: -4px;
                 -ms-transform: rotate(-45deg);
                 transform: rotate(-45deg);
