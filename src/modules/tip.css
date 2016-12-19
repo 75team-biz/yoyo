@@ -1,74 +1,65 @@
-.tip {
-    cursor: pointer;
-    color: #8594b5;
-    & .fa-question-circle-o {
-        font-size: 1.4em;
-        position: relative;
-        margin: 0 .3em;
-        vertical-align: middle;
-    }
-    & .tip-wrap {
-        position: absolute;
-        color: #73ace6;
-        background: #f1f9fc;
-        background: rgba(241, 249, 252, 0.9);
-        padding: .5em;
-        font: normal normal 12px/1.6 Helvetica, Microsoft Yahei, Sans-Serif;
-        font-size: 1rem;
-        line-height: 1.5rem;
-        white-space: initial;
-        border: 1px solid #c0dfeb;
-        border-radius: 0.4em;
-        z-index: 999;
-        &:before {
-            content: '';
-            width: 5px;
-            height: 5px;
-            border-left: 1px solid #c0dfeb;
-            border-bottom: 1px solid #c0dfeb;
-            position: absolute;
-            background: ##f1f9fc;
-            background: rgba(241, 249, 252, .9);
-            -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-        }
-        &.right {
-            left: 2em;
-            top: -.5em;
-            &:before {
-                top: .9em;
-                left: -4px;
-            }
-        }
-        &.left {
-            right: 2em;
-            top: -.5em;
-            &:before {
-                top: .9em;
-                right: -4px;
-                -ms-transform: rotate(-135deg);
-                transform: rotate(-135deg);
-            }
-        }
-        &.top {
-            left: -.5em;
-            bottom: 2em;
-            &:before {
-                left: .9em;
-                bottom: -4px;
-                -ms-transform: rotate(-45deg);
-                transform: rotate(-45deg);
-            }
-        }
-        &.bottom {
-            left: -.5em;
-            top: 2em;
-            &:before {
-                left: .9em;
-                top: -4px;
-                -ms-transform: rotate(135deg);
-                transform: rotate(135deg);
-            }
-        }
-    }
+/*=============Tooltip=============*/
+.tooltip {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.v-tags-tip {
+  position: absolute;
+  color: #73ace6;
+  background: #f1f9fc;
+  background: rgba(241,249,252,.9);
+  padding: .5em;o
+  font: normal normal 12px/1.6 Helvetica,Microsoft Yahei,Sans-Serif;
+  font-size: 12px;
+  font-size: 1rem;
+  line-height: 18px;
+  line-height: 1.5rem;
+  white-space: normal;
+  border: 1px solid #c0dfeb;
+  border-radius: .4em;
+  z-index: 5;
+}
+
+.v-tags-tip:before {
+  position: absolute;
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-left: 1px solid #c0dfeb;
+  border-bottom: 1px solid #c0dfeb;
+  background: 0 0;
+  background: rgba(241,249,252,.9);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.v-tags-tip.top:before {
+  bottom: -4px;
+  left: 50%;
+  margin-left: -4px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.v-tags-tip.right:before {
+  left: -4px;
+  top: 50%;
+  margin-top: -4px;
+}
+
+.v-tags-tip.bottom:before {
+  left: 50%;
+  top: -4px;
+  margin-left: -4px;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.v-tags-tip.left:before {
+  right: -4px;
+  top: 50%;
+  margin-top: -4px;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
 }

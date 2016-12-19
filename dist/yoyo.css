@@ -1076,7 +1076,7 @@ select.size-big {
     position: fixed;
     top: 50%;
     left: 50%;
-    z-index: 3;
+    z-index: 4;
     background: #fff;
     border: 1px solid #acacac;
     box-shadow: 0 0 3px #b3b3b3;
@@ -1104,7 +1104,7 @@ select.size-big {
     opacity: .6;
     filter: alpha(opacity = 60);
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     top: 0;
     left: 0;
     right: 0;
@@ -1114,7 +1114,7 @@ select.size-big {
 .public-dialog {
     box-shadow: 0 0 16px #333;
     border-color: #333;
-    z-index: 4;
+    z-index: 5;
 }
 
 .public-dialog .dialog-bd {
@@ -1156,24 +1156,18 @@ select.size-big {
     display: none;
 }
 
-.tip {
+.tooltip {
+    display: inline-block;
     cursor: pointer;
-    color: #8594b5;
 }
 
-.tip .fa-question-circle-o {
-    font-size: 1.4em;
-    position: relative;
-    margin: 0 .3em;
-    vertical-align: middle;
-}
-
-.tip .tip-wrap {
+.v-tags-tip {
+    position: absolute;
     color: #73ace6;
     background: #f1f9fc;
     background: rgba(241, 249, 252, .9);
     padding: .5em;
-    font: normal normal 12px/1.6 Helvetica, Microsoft Yahei, Sans-Serif;
+    o: normal normal 12px/1.6 Helvetica, Microsoft Yahei, Sans-Serif;
     font-size: 12px;
     font-size: 1rem;
     line-height: 18px;
@@ -1181,69 +1175,50 @@ select.size-big {
     white-space: normal;
     border: 1px solid #c0dfeb;
     border-radius: .4em;
-    z-index: 5;
+    z-index: 2;
 }
 
-.tip .tip-wrap, .tip .tip-wrap:before {
+.v-tags-tip:before {
     position: absolute;
-}
-
-.tip .tip-wrap:before {
     content: '';
     width: 5px;
     height: 5px;
     border-left: 1px solid #c0dfeb;
     border-bottom: 1px solid #c0dfeb;
-    background: ##f1f9fc;
+    background: 0 0;
     background: rgba(241, 249, 252, .9);
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
 }
 
-.tip .tip-wrap.right {
-    left: 2em;
-    top: -.5em;
-}
-
-.tip .tip-wrap.right:before {
-    top: .9em;
-    left: -4px;
-}
-
-.tip .tip-wrap.left {
-    right: 2em;
-    top: -.5em;
-}
-
-.tip .tip-wrap.left:before {
-    top: .9em;
-    right: -4px;
-    -webkit-transform: rotate(-135deg);
-            transform: rotate(-135deg);
-}
-
-.tip .tip-wrap.top {
-    left: -.5em;
-    bottom: 2em;
-}
-
-.tip .tip-wrap.top:before {
-    left: .9em;
+.v-tags-tip.top:before {
     bottom: -4px;
+    left: 50%;
+    margin-left: -4px;
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
 }
 
-.tip .tip-wrap.bottom {
-    left: -.5em;
-    top: 2em;
+.v-tags-tip.right:before {
+    left: -4px;
+    top: 50%;
+    margin-top: -4px;
 }
 
-.tip .tip-wrap.bottom:before {
-    left: .9em;
+.v-tags-tip.bottom:before {
+    left: 50%;
     top: -4px;
+    margin-left: -4px;
     -webkit-transform: rotate(135deg);
             transform: rotate(135deg);
+}
+
+.v-tags-tip.left:before {
+    right: -4px;
+    top: 50%;
+    margin-top: -4px;
+    -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg);
 }
 
 .calendar {
@@ -1395,7 +1370,7 @@ select.size-big {
 
 .modal {
     position: fixed;
-    z-index: 3;
+    z-index: 4;
     background: #fff;
     top: 50%;
     left: 50%;
@@ -1438,7 +1413,7 @@ select.size-big {
     opacity: .6;
     filter: alpha(opacity = 60);
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     top: 0;
     left: 0;
     right: 0;
@@ -1448,7 +1423,7 @@ select.size-big {
 .public-modal {
     box-shadow: 0 0 16px #333;
     border-color: #333;
-    z-index: 4;
+    z-index: 5;
 }
 
 .public-modal .modal-bd {

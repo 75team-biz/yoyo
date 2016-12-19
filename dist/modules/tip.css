@@ -1,23 +1,19 @@
-.tip {
+.tooltip {
+    display: inline-block;
     cursor: pointer;
-    color: #8594b5;
 }
 
-.tip .fa-question-circle-o {
-    font-size: 1.4em;
-    position: relative;
-    margin: 0 .3em;
-    vertical-align: middle;
-}
-
-.tip .tip-wrap {
+.v-tags-tip {
+    position: absolute;
     color: #73ace6;
     background: #f1f9fc;
     background: rgba(241, 249, 252, .9);
     padding: .5em;
-    font: normal normal 12px/1.6 Helvetica, Microsoft Yahei, Sans-Serif;
+    o: normal normal 12px/1.6 Helvetica, Microsoft Yahei, Sans-Serif;
+    font-size: 12px;
     font-size: 16px;
     font-size: 1rem;
+    line-height: 18px;
     line-height: 24px;
     line-height: 1.5rem;
     white-space: normal;
@@ -26,64 +22,45 @@
     z-index: 1;
 }
 
-.tip .tip-wrap, .tip .tip-wrap:before {
+.v-tags-tip:before {
     position: absolute;
-}
-
-.tip .tip-wrap:before {
     content: '';
     width: 5px;
     height: 5px;
     border-left: 1px solid #c0dfeb;
     border-bottom: 1px solid #c0dfeb;
-    background: ##f1f9fc;
+    background: 0 0;
     background: rgba(241, 249, 252, .9);
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
 }
 
-.tip .tip-wrap.right {
-    left: 2em;
-    top: -.5em;
-}
-
-.tip .tip-wrap.right:before {
-    top: .9em;
-    left: -4px;
-}
-
-.tip .tip-wrap.left {
-    right: 2em;
-    top: -.5em;
-}
-
-.tip .tip-wrap.left:before {
-    top: .9em;
-    right: -4px;
-    -webkit-transform: rotate(-135deg);
-            transform: rotate(-135deg);
-}
-
-.tip .tip-wrap.top {
-    left: -.5em;
-    bottom: 2em;
-}
-
-.tip .tip-wrap.top:before {
-    left: .9em;
+.v-tags-tip.top:before {
     bottom: -4px;
+    left: 50%;
+    margin-left: -4px;
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
 }
 
-.tip .tip-wrap.bottom {
-    left: -.5em;
-    top: 2em;
+.v-tags-tip.right:before {
+    left: -4px;
+    top: 50%;
+    margin-top: -4px;
 }
 
-.tip .tip-wrap.bottom:before {
-    left: .9em;
+.v-tags-tip.bottom:before {
+    left: 50%;
     top: -4px;
+    margin-left: -4px;
     -webkit-transform: rotate(135deg);
             transform: rotate(135deg);
+}
+
+.v-tags-tip.left:before {
+    right: -4px;
+    top: 50%;
+    margin-top: -4px;
+    -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg);
 }
