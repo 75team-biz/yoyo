@@ -720,10 +720,21 @@ button {
             user-select: none;
     background-image: none;
     border-radius: .3em;
+    color: #999;
+    background-color: #f1f1f1;
+    border: 1px solid #e0e0e0;
 }
 
 .btn:focus, .btn:hover {
     outline: none;
+}
+
+.btn:hover {
+    background-color: #e7e7e7;
+}
+
+.btn:focus {
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, .3);
 }
 
 .btn.disabled, .btn.disabled:hover {
@@ -762,33 +773,15 @@ button {
     min-width: 6em;
 }
 
-.btn-default {
-    color: #999;
-    background-color: #fafafa;
-    border: 1px solid #e0e0e0;
-}
-
-.btn-default:hover {
-    color: #fff;
-    background-color: #a0a0a0;
-    border: 1px solid #e0e0e0;
-}
-
-.btn-info, .btn-primary {
+.btn-primary {
     color: #fff;
     background-color: #2196f3;
-}
-
-.btn-info:hover, .btn-primary:hover {
-    color: #fff;
-    background-color: #218de6;
-}
-
-.btn-primary {
     border: 1px solid #2196f3;
 }
 
 .btn-primary:hover {
+    color: #fff;
+    background-color: #218de6;
     border: 1px solid #218de6;
 }
 
@@ -798,59 +791,10 @@ button {
     border: 1px solid #2196f3;
 }
 
-.btn-icon {
-    font-size: 18px;
-}
-
-.btn-icon, .btn-icon:hover {
-    background: transparent;
-    border: none;
-}
-
-.btn-icon .btn-default {
-    color: #999;
-}
-
-.btn-icon .btn-default:hover, .btn-icon.btn-primary {
+.btn-white:hover {
     color: #2196f3;
-}
-
-.btn-icon.btn-primary:hover {
-    color: #218de6;
-}
-
-.btn-label-item {
-    color: #2196f3;
-    background-color: #fff;
-    border: 1px solid #2196f3;
-    padding: .8em 1.2em;
-    border-radius: 1.5em;
-}
-
-.btn-label-item:hover {
-    color: #fff;
-    background-color: #218de6;
+    background-color: #f5f5f5;
     border: 1px solid #218de6;
-}
-
-.btn.close:before {
-    display: block;
-    position: absolute;
-    right: -4px;
-    top: -4px;
-    content: "×";
-    background: #f46054;
-    border-radius: 50%;
-    width: 16px;
-    line-height: 16px;
-    color: #fff;
-    font-weight: 700;
-    font-size: 15px;
-    cursor: pointer;
-}
-
-.btn.close.btn-round:before {
-    right: 0;
 }
 
 input::-ms-clear {
@@ -984,13 +928,21 @@ input[type=checkbox]:checked+i:hover, input[type=radio]:checked+i:hover {
     box-shadow: inset 0 0 3px 0 #2196f3;
 }
 
-label:hover input[type=radio]+i {
+label:hover {
+    cursor: pointer;
+}
+
+label:hover input[type=checkbox]+i, label:hover input[type=radio]+i {
     box-shadow: inset 0 0 3px 0 #aaa;
 }
 
 label:hover input[type=checkbox]:checked+i,
 label:hover input[type=radio]:checked+i {
     box-shadow: inset 0 0 3px 0 #2196f3;
+}
+
+input[type=checkbox]:focus+i, input[type=radio]:focus+i {
+    box-shadow: 0 1px .5em 0 #aaa;
 }
 
 input[type=checkbox]+i:after, input[type=radio]+i:after {

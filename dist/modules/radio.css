@@ -73,13 +73,21 @@ input[type=checkbox]:checked+i:hover, input[type=radio]:checked+i:hover {
     box-shadow: inset 0 0 3px 0 #2196f3;
 }
 
-label:hover input[type=radio]+i {
+label:hover {
+    cursor: pointer;
+}
+
+label:hover input[type=checkbox]+i, label:hover input[type=radio]+i {
     box-shadow: inset 0 0 3px 0 #aaa;
 }
 
 label:hover input[type=checkbox]:checked+i,
 label:hover input[type=radio]:checked+i {
     box-shadow: inset 0 0 3px 0 #2196f3;
+}
+
+input[type=checkbox]:focus+i, input[type=radio]:focus+i {
+    box-shadow: 0 1px .5em 0 #aaa;
 }
 
 input[type=checkbox]+i:after, input[type=radio]+i:after {

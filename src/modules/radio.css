@@ -38,7 +38,9 @@ input[type="checkbox"]:checked+ i{
 }
 
 label:hover {
-    & input[type="radio"] + i {
+    cursor: pointer;
+    & input[type="radio"] + i,
+    & input[type="checkbox"] + i{
         box-shadow: inset 0 0 3px 0 #aaa;
     }
 
@@ -46,6 +48,11 @@ label:hover {
     & input[type="checkbox"]:checked+ i{
         box-shadow: inset 0 0 3px 0 var(--primary-color);
     }
+}
+
+input[type="radio"]:focus + i,
+input[type="checkbox"]:focus+ i{
+    box-shadow: 0 1px .5em 0 #aaa;
 }
 
 input[type="radio"] + i:after,
