@@ -1218,7 +1218,7 @@ select.size-big {
     text-align: center;
 }
 
-.calendar .day-wrap .day {
+.calendar .day-wrap .day:not(.place) {
     color: #2196f3;
     cursor: pointer;
 }
@@ -1227,7 +1227,7 @@ select.size-big {
     background: #e7f4fd;
 }
 
-.calendar .day-wrap .day:hover {
+.calendar .day-wrap .day:not(.place):hover {
     background: #a0c9f9;
     color: #fff;
 }
