@@ -89,6 +89,8 @@
     width: 100%;
     cursor: pointer;
     pointer-events: none;
+    padding: 0;
+    margin: 0;
 }
 
 .input-range .mark li {
@@ -96,6 +98,7 @@
     top: -8px;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
+    list-style: none;
 }
 
 .input-range .mark li:first-child:before,

@@ -84,10 +84,13 @@
     width: 100%;
     cursor: pointer;
     pointer-events: none;
+    padding: 0;
+    margin: 0;
     & li {
       position: absolute;
       top: -var(--range-size);
       transform: translateX(-50%);
+      list-style: none;
       &:first-child ,&:last-child {
         &:before {
           visibility: hidden;
