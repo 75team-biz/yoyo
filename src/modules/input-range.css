@@ -1,0 +1,107 @@
+@import '../base/variables.css';
+
+:root {
+    --range-size: 8px;
+    --thumb-size: 20px;
+    --thumb-color: white;
+    --box-shadow-color: #aaa;
+}
+
+.input-range {
+  width: 100%;
+  user-select: none;
+  cursor: pointer;
+  margin: calc(var(--thumb-size)*2) 0;
+
+  & .range {
+    position: relative;
+    width: 100%;
+    height: var(--range-size);
+    background: color(var(--primary-color) whiteness(90%));
+    border-radius: var(--range-size);
+
+    & .track {
+      background: var(--primary-color);
+      border-radius: var(--range-size);
+      height: 100%;
+    }
+
+    & .thumb {
+      position: relative;
+      background: var(--thumb-color);
+      box-shadow: 0 0 10px -2px var(--box-shadow-color);
+      width: var(--thumb-size);
+      height: var(--thumb-size);
+      border-radius: var(--thumb-size);
+      margin-top: -14px;
+      transform: translateX(-calc(var(--thumb-size)/2));
+      &.transition {
+        transition: all .3s ease;
+      }
+      &:before, &:after {
+        content: ' ';
+        position: absolute;
+        left: 8px;
+        top: 6px;
+        height: 8px;
+        border-left: 1px solid var(--primary-color);
+      }
+      &:after {
+        left: 11px;
+      }
+    }
+    & .value {
+      position: absolute;
+      top: -calc(var(--thumb-size)*2);
+      transform: translateX(-50%);
+      color: var(--primary-color);
+      background: var(--thumb-color);
+      box-shadow: 0 0 10px -2px var(--box-shadow-color);
+      border-radius: 4px;
+      height: 20px;
+      line-height: 20px;
+      padding: 0 10px;
+      text-align: center;
+      white-space: nowrap;
+      &:before {
+        content: ' ';
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        left: 50%;
+        top: 100%;
+        background: #fff;
+        margin-left: -3px;
+        margin-top: -4px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  & .mark {
+    color: var(--primary-color);
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    pointer-events: none;
+    & li {
+      position: absolute;
+      top: -var(--range-size);
+      transform: translateX(-50%);
+      &:first-child ,&:last-child {
+        &:before {
+          visibility: hidden;
+        }
+      }
+      &:before {
+        content: ' ';
+        width: 2px;
+        height: var(--range-size);
+        background: #fff;
+        display: block;
+        margin: auto;
+        margin-bottom: calc(var(--thumb-size)/2);
+      }
+    }
+  }
+}
