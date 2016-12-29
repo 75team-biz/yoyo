@@ -4,6 +4,7 @@
     --range-size: 8px;
     --thumb-size: 20px;
     --thumb-color: white;
+    --disabled-color: #bdbdbd;
     --box-shadow-color: #aaa;
 }
 
@@ -105,6 +106,18 @@
         margin: auto;
         margin-bottom: calc(var(--thumb-size)/2);
       }
+    }
+  }
+  &[disabled] {
+    cursor: not-allowed;
+    & .range, & .track {
+        background-color: var(--disabled-color);
+    }
+    & .value, & .mark {
+        color: var(--disabled-color);
+    }
+    & .thumb:before, & .thumb:after {
+        border-left: 1px solid var(--disabled-color);
     }
   }
 }

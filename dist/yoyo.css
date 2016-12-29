@@ -1534,3 +1534,19 @@ select.size-big {
     margin: auto;
     margin-bottom: 10px;
 }
+
+.input-range[disabled] {
+    cursor: not-allowed;
+}
+
+.input-range[disabled] .range, .input-range[disabled] .track {
+    background-color: #bdbdbd;
+}
+
+.input-range[disabled] .mark, .input-range[disabled] .value {
+    color: #bdbdbd;
+}
+
+.input-range[disabled] .thumb:after, .input-range[disabled] .thumb:before {
+    border-left: 1px solid #bdbdbd;
+}
