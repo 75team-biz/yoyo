@@ -9,13 +9,7 @@
     background: #f1f9fc;
     background: rgba(241, 249, 252, .9);
     padding: .5em;
-    o: normal normal 12px/1.6 Helvetica, Microsoft Yahei, Sans-Serif;
-    font-size: 12px;
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 18px;
-    line-height: 24px;
-    line-height: 1.5rem;
+    line-height: 1.5;
     white-space: normal;
     border: 1px solid #c0dfeb;
     border-radius: .4em;
