@@ -43,7 +43,7 @@
     text-align: center;
 }
 
-.calendar .day-wrap .day:not(.place) {
+.calendar .day:not(.place) {
     color: #2196f3;
     cursor: pointer;
 }
@@ -52,7 +52,7 @@
     background: #e7f4fd;
 }
 
-.calendar .day-wrap .day:not(.place):hover {
+.calendar .day:not(.place):hover {
     background: #a0c9f9;
     color: #fff;
 }
@@ -65,4 +65,5 @@
 .calendar .day-wrap .day.disabled {
     background: #ecf0f1;
     color: #ccc;
+    cursor: not-allowed;
 }
