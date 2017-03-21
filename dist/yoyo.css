@@ -1028,7 +1028,7 @@ select.size-big {
     position: fixed;
     top: 50%;
     left: 50%;
-    z-index: 4;
+    z-index: 3;
     background: #fff;
     border: 1px solid #acacac;
     box-shadow: 0 0 3px #b3b3b3;
@@ -1056,7 +1056,7 @@ select.size-big {
     opacity: .6;
     filter: alpha(opacity = 60);
     position: fixed;
-    z-index: 3;
+    z-index: 2;
     top: 0;
     left: 0;
     right: 0;
@@ -1066,7 +1066,7 @@ select.size-big {
 .public-dialog {
     box-shadow: 0 0 16px #333;
     border-color: #333;
-    z-index: 5;
+    z-index: 4;
 }
 
 .public-dialog .dialog-bd {
@@ -1123,7 +1123,7 @@ select.size-big {
     white-space: normal;
     border: 1px solid #c0dfeb;
     border-radius: .4em;
-    z-index: 2;
+    z-index: 5;
 }
 
 .v-tags-tip:before {
@@ -1318,7 +1318,7 @@ select.size-big {
 
 .modal {
     position: fixed;
-    z-index: 4;
+    z-index: 3;
     background: #fff;
     top: 50%;
     left: 50%;
@@ -1361,7 +1361,7 @@ select.size-big {
     opacity: .6;
     filter: alpha(opacity = 60);
     position: fixed;
-    z-index: 3;
+    z-index: 2;
     top: 0;
     left: 0;
     right: 0;
@@ -1371,7 +1371,7 @@ select.size-big {
 .public-modal {
     box-shadow: 0 0 16px #333;
     border-color: #333;
-    z-index: 5;
+    z-index: 4;
 }
 
 .public-modal .modal-bd {
