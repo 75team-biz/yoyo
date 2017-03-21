@@ -49,6 +49,9 @@
                     color: var(--primary-color);
                     border-right: 2px solid var(--primary-color);
                 }
+                &:hover {
+                    color: var(--primary-color);
+                }
             }
         }
     }
