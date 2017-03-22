@@ -1,10 +1,11 @@
 .calendar {
   position: absolute;
-  padding: .4em;
+  padding: .8em .4em .4em;
   width: 18em;
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 8px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px .5em 0px rgba(0, 0, 0, 0.2);
+  z-index: 9;
 }
 
 .calendar .head {
@@ -13,7 +14,7 @@
 
 .calendar .head .fa {
   float: left;
-  line-height: 35px;
+  line-height: 2.5;
   padding: 0 .4em;
   cursor: pointer;
 }
@@ -27,19 +28,19 @@
 }
 
 .calendar select {
-  width: 62px;
+  width: 5em;
 }
 
 .calendar .month-select {
-  width: 50px;
+  width: 3.57em;
   margin-left: 0.4em;
 }
 
 .calendar .day-wrap .day, .calendar .week-wrap .week {
   float: left;
-  width: 34px;
-  height: 34px;
-  line-height: 34px;
+  width: 2.42em;
+  height: 2.42em;
+  line-height: 2.42;
   text-align: center;
 }
 

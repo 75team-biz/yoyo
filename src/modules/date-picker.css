@@ -1,10 +1,20 @@
 .datepicker {
-  width: 200px;
+  position: relative;
+  width: 8em;
 }
 
 .datepicker input[type=text]:read-only, .datepicker input[type=text][readonly=readonly]{
   border: 1px solid #e9e9e9;
   background-color: #fff;
   color: #666;
+  cursor: pointer;
+  width: 100%;
+}
+
+.datepicker .fa-calendar {
+  position: absolute;
+  right: 0.6em;
+  top: 0.75em;
+  pointer-events: none;
 }
 
