@@ -14,7 +14,7 @@
   white-space: normal;
   border: 1px solid #c0dfeb;
   border-radius: .4em;
-  z-index: 5;
+  z-index: 99999;
 }
 
 .v-tags-tip:before {
