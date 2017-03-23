@@ -8,6 +8,7 @@
   background-color: #fff;
   color: #666;
   cursor: pointer;
+  width: 100%;
 }
 
 .daterange .fa-calendar {
@@ -19,25 +20,38 @@
 
 .daterange .calendar-wrap{
   position: absolute;
-  padding: 0.6em;
-  width: 37.5em;
+  width: 35.78em;
   border: 1px solid #bbb;
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px .5em 0px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
+  z-index: 8;
 }
+
+.daterange .datespan{
+  @apply --clearfix;
+  & .start, & .end {
+    display: inline-block;
+    padding: 0.4em 6.84em;
+    background: #e7f4fd;
+  }
+  & .end {
+    float: right;
+  }
+}
+
 
 .daterange .calendar {
   position: relative;
   display: inline-block;
   box-shadow: none;
   border: none;
-  height: 286px;
+  height: 20em;
 }
 
 .daterange .range-str {
-  padding: 1em 0 .2em;
+  padding: 1em .2em;
   text-align: center;
 }
 
