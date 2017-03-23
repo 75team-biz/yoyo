@@ -10,17 +10,19 @@
 
 .calendar .head {
   text-align: center;
+  overflow: hidden;
 }
 
 .calendar .head .fa {
   float: left;
-  line-height: 2.5;
+  line-height: 2;
   padding: 0 .4em;
   cursor: pointer;
 }
 
 .calendar .fa.disabled {
   color: #ccc;
+  cursor: not-allowed;
 }
 
 .calendar .head .fa-chevron-right {
@@ -29,6 +31,7 @@
 
 .calendar select {
   width: 5em;
+  height: 2em;
 }
 
 .calendar .month-select {
@@ -64,6 +67,11 @@
 }
 
 .calendar .day-wrap .day.disabled {
-  background: #ecf0f1;
   color: #ccc;
+  cursor: not-allowed;
+}
+.calendar .day-wrap .day.disabled:hover {
+  background: #fff;
+  color: #ccc;
+  cursor: not-allowed;
 }

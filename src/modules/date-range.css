@@ -59,7 +59,6 @@
 .daterange .shortcut {
   margin-bottom: .6em;
   text-align: center;
-  background: #e7f4fd;
 }
 
 .daterange .shortcut span {
@@ -67,6 +66,9 @@
   color: #218de6;
   padding: .4em 1em;
   cursor: pointer;
+  &:hover {
+    background: #e7f4fd;
+  }
 }
 
 .daterange .operations {
